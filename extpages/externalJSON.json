@@ -1,0 +1,77 @@
+{"content_":[
+	{"id":0, "name":"thema", "value":"Thema der Befragung"},
+	{"id":1, "name":"welcome", "value":"Willkommen"},
+	{"id":2, "name":"welcometxt", "value":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher "},
+	{"id":3, "name":"accenttitle", "value":"Betonungtitel"},
+	{"id":4, "name":"resultArticle", "value":"Hier steht eine kurze Erklärung zum Ergebnis"},
+	{"id":5, "name":"favoriteArticle", "value":"Hier steht eine kurze Erklärung zu den Favoriten"}
+],"categories":[
+	{"id":0, "name":"Sport"},
+	{"id":1, "name":"Essen"}
+],"parties":[
+	{"id":0, "name":"SPD"},
+	{"id":1, "name":"CDU"},
+	{"id":2, "name":"Bündnis 90/Die Grünen"},
+	{"id":3, "name":"Die Linke"}
+],"questions":[
+	{
+		"id":1,
+		"cat_id":0,
+		"text":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei?",
+		"answer":null,
+		"accent":false,
+		"positions":[
+		{"orientation":1, "argumentation":"Antworttext SPD 01"},
+		{"orientation":1, "argumentation":"Antworttext CDU 01"},
+		{"orientation":-1, "argumentation":"Lorem ipsum la Bla Bla3"},
+		{"orientation":-1, "argumentation":"Lorem ipsum la Bla Bla4"}]
+	},
+	{
+		"id":2,
+		"cat_id":0,
+		"text":"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot ?",
+		"answer":null,
+		"accent":false,
+		"positions":[
+		{"orientation":1, "argumentation":"Antworttext SPD 02"},
+		{"orientation":-1, "argumentation":"Antworttext CDU 02"},
+		{"orientation":1, "argumentation":"g"},
+		{"orientation":-1, "argumentation":"li"}]
+	},
+	{
+		"id":3,
+		"cat_id":0,
+		"text":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei?",
+		"answer":null,
+		"accent":false,
+		"positions":[
+		{"orientation":-1, "argumentation":"Antworttext SPD 03"},
+		{"orientation":1, "argumentation":"Antworttext CDU 03"},
+		{"orientation":-1, "argumentation":"g"},
+		{"orientation":-1, "argumentation":"li"}]
+	},
+	{
+		"id":4,
+		"cat_id":1,
+		"text":"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot ?",
+		"answer":null,
+		"accent":false,
+		"positions":[
+		{"orientation":1, "argumentation":"Antworttext SPD 04"},
+		{"orientation":-1, "argumentation":"Antworttext CDU 04"},
+		{"orientation":1, "argumentation":"g"},
+		{"orientation":-1, "argumentation":"li"}]
+	},
+	{
+		"id":5,
+		"cat_id":1,
+		"text":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei??",
+		"answer":null,
+		"accent":false,
+		"positions":[
+		{"orientation":-1, "argumentation":"Antworttext SPD 05"},
+		{"orientation":-1, "argumentation":"Antworttext CDU 05"},
+		{"orientation":1, "argumentation":"g"},
+		{"orientation":-1, "argumentation":"li"}]
+	}
+]}

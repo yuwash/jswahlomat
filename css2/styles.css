@@ -1,0 +1,103 @@
+html{
+	font-family: arial;
+}
+body{
+	background-color: #F5F2E3;
+	margin: 0;
+}
+header{
+	background-color: #66CC00;
+	height: 44px;
+}
+header img{
+	position: relative;
+	margin: 0;
+	left: 50%;
+	margin-left: -93px;
+}
+.themebox, .categorybox{
+	background-color: #55AF03;
+	font-size: 0.8em;
+	height: 44px;
+}
+.themebox h2, .categorybox h2{
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+	color: #fff;
+}
+article{
+	background-color: #fff;
+	margin: 10px;
+	padding: 10px;
+	box-sizing: border-box;
+}
+article h3{
+	color: #55AF03;
+	margin: 0px;
+}
+article p{
+	margin: 0px;
+}
+.buttonBox{
+	margin: 5px;
+}
+.buttonBox button{
+	background-color: #66CC00;
+	color: #fff;
+	border-style: none;
+	width: 100%;
+	height: 44px;
+}
+.buttonBox button:hover{
+	background-color: #55AF03;
+}
+/* Favoriten */
+section ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+section ul li{
+	display: block;
+	cursor: pointer;
+	position: relative;
+	height:auto;
+	overflow:auto;
+}
+section ul li p{
+	position: relative;
+	float: left;
+	width: calc(100% - 44px);
+}
+section ul li .accentbox{
+	position: relative;
+	float: right;
+	right: 0;
+}
+section ul li .accentbox img{
+	padding: 10px;
+	height: 100%;
+}
+.positive{
+	background-color: #BDECF9;
+	border-bottom: solid 1px #29ABE2;
+}
+.positive div{
+	background-color: #29ABE2;
+}
+.neutral{
+	background-color: #E2E2E2;
+	border-bottom: solid 1px #B3B3B3;
+}
+.neutral div{
+	background-color: #B3B3B3;
+}
+.negative{
+	background-color: #F2CBC0;
+	border-bottom: solid 1px #F15A24;
+}
+.negative div{
+	background-color: #F15A24;
+}
+/* Ergebniss */

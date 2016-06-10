@@ -1,0 +1,41 @@
+#newsList{
+	list-style: none;
+	width: 100%;
+}
+#newsList img{
+	float: left;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+#newsList h3{
+	padding: 10px;
+	line-height: 1.5em;
+	text-align: center;
+}
+#newsList time{
+	float: left;
+	display: block;
+	box-sizing:border-box;
+	text-align: center;
+	color: #E23130;
+	padding: 10px;
+	width: 100%;
+
+  font-weight: 700;
+}
+#newsList p{
+	float: left;
+	padding: 10px;
+}
+@media only screen and (min-width: 800px) {
+	#newsList img{
+		width: 300px;
+	}
+	#newsList article{
+		float: right;
+		width: calc(100% - 300px);
+		height: 300px;
+		background-color: #eee;
+	}
+}
