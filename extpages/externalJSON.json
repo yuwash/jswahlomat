@@ -71,7 +71,7 @@
 		"positions":[
 		{"orientation":-1, "argumentation":"Antworttext SPD 05"},
 		{"orientation":-1, "argumentation":"Antworttext CDU 05"},
-		{"orientation":1, "argumentation":"g"},
+		{"orientation":-1, "argumentation":"g"},
 		{"orientation":-1, "argumentation":"li"}]
 	}
 ]}

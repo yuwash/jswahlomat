@@ -8,9 +8,9 @@
 	<ul>
 		<li ng-repeat="p in data.parties">
 			<button ng-click="setPartyVisible(p.id)">
-				<h1>{{p.name+partyVisible}} {{getTotalPosition(p.id)}}%</h1>
+				<h1>{{p.name}} {{getTotalPosition(p.id)}}%</h1>
 			</button>
-			<ul id="{{'party'+p.id}}" class="party">
+			<ul id="{{'party'+p.id}}" class="party" ng-show="isPartyVisible(p.id);">
 				<li ng-repeat="q in data.questions" class="{{getRating(q.positions[p.id].orientation)}}">
 					<p class="question">
 						{{q.text}}

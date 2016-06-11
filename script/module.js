@@ -49,19 +49,22 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope,$routeParams
   
   $scope.question_nr = 0;
   $scope.title1 = "Startseite";
+  $scope.wasLastQuestion = false;
+  $scope.visibleParty = null;
 
   // load Data
   myFunction($scope, Data);
   $scope.isLastQuestion = function() {
-    console.log("abcabc");
-    return false;
+    return $scope.wasLastQuestion; 
+  }
+  $scope.correct = function() {
+    $scope.wasLastQuestion =false; 
   }
   $scope.forward  = function() {
     if($scope.question_nr<$scope.data.questions.length-1){
         $scope.question_nr = $scope.question_nr + 1;
     }else{
-      // console.log($scope.data.questions);
-      window.location.href = "#/favorites";
+        $scope.wasLastQuestion = true;
     }
   }
     $scope.back = function() {
@@ -92,6 +95,16 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope,$routeParams
         var u_rating = $scope.data.questions[i].answer*(1+$scope.data.questions[i].accent);
         tmp+=u_rating * $scope.data.questions[i].positions[id].orientation;
       }
-      return tmp;
+      return tmp*10;
+    }
+    $scope.setPartyVisible = function(id){
+      if(id == $scope.visibleParty){
+        $scope.visibleParty = null;
+      }else{
+        $scope.visibleParty = id;
+      }
+    }
+    $scope.isPartyVisible = function(id){
+      return id == $scope.visibleParty;
     }
 });

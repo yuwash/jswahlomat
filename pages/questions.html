@@ -1,9 +1,18 @@
 <h1>Befragung</h1>
-	<article>
+	<article ng-hide="isLastQuestion();">
 		<h2>Kategorie: {{data.categories[data.questions[question_nr].cat_id].name}}</h2>
 		<h3>Frage: {{data.questions[question_nr].id}} von {{data.questions.length}}</h3>
 		<p>{{data.questions[question_nr].text}}</p>
-		<p>{{data.questions[question_nr].answer}}</p>
+		<!-- <p>{{data.questions[question_nr].answer}}</p> -->
+		
+	</article>
+	<article class="confirmation screen" ng-show="isLastQuestion();">
+		<p>
+			Wenn Sie jetzt fortfahren können Sie
+			ihre Antworten nichtmehr korrigieren.
+			<a href="#/favorites">Weiter</a>
+			<a ng-click="correct();">Korrigieren</a>
+		</p>
 	</article>
 	<div class="buttonBox">
 		<a ng-click="vote(-1);forward();" class="fa fa-minus-square-o"></a>
@@ -13,12 +22,4 @@
 	<div class="buttonBox">
 		<a ng-click="back();" class="fa fa-caret-square-o-left"></a>
 		<a ng-click="vote(0);forward();"  class="fa fa-caret-square-o-right"></a>
-	</div>
-	<div class="confirmation screen" ng-show="isLastQuestion();">
-		<p>
-			Wenn Sie jetzt fortfahren können Sie
-			ihre Antworten nichtmehr korrigieren.
-			<a href="#/favorites">Weiter</a>
-			<a ng-click="">Korrigieren</a>
-		</p>
 	</div>
