@@ -6,11 +6,11 @@
 	</p>
 	<ul>
 		<li ng-repeat="q in data.questions" ng-click="q.accent=!q.accent" class="{{getRating(q.answer)}}">
-			<p>{{q.text}}</p>
-			<i class="accentbox {{getFav(q.accent)}}"></i>
+			<i class="accentbox {{getFav(q.accent)}}  fa-fw"></i>
+      <span>{{q.text}}</span>
 		</li>
 	</ul>
 </article>
-<div class="buttonBox">
+<div class="buttonBox userInput">
 	<a href="#/result">Bestätigung</a>
 </div>

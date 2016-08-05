@@ -1,25 +1,25 @@
 <h1>Befragung</h1>
-	<article ng-hide="isLastQuestion();">
-		<h2>Kategorie: {{data.categories[data.questions[question_nr].cat_id].name}}</h2>
-		<h3>Frage: {{data.questions[question_nr].id}} von {{data.questions.length}}</h3>
-		<p>{{data.questions[question_nr].text}}</p>
-		<!-- <p>{{data.questions[question_nr].answer}}</p> -->
-		
-	</article>
-	<article class="confirmation screen" ng-show="isLastQuestion();">
-		<p>
-			Wenn Sie jetzt fortfahren können Sie
-			ihre Antworten nichtmehr korrigieren.
-			<a href="#/favorites">Weiter</a>
-			<a ng-click="correct();">Korrigieren</a>
-		</p>
-	</article>
-	<div class="buttonBox">
-		<a ng-click="vote(-1);forward();" class="fa fa-minus-square-o"></a>
-		<a ng-click="vote(0);forward();" class="fa fa-square-o"></a>
-		<a ng-click="vote(1);forward();" class="fa fa-plus-square-o"></a>
-	</div>
-	<div class="buttonBox">
-		<a ng-click="back();" class="fa fa-caret-square-o-left"></a>
-		<a ng-click="vote(0);forward();"  class="fa fa-caret-square-o-right"></a>
-	</div>
+<article id='questions' ng-hide="isLastQuestion();">
+  <a ng-click="back();" class="nav nav-back fa  fa-chevron-left fa-3x"></a>
+  <div class="content">
+    <h2>Kategorie: {{data.categories[data.questions[question_nr].cat_id].name}}</h2>
+    <h3>Frage: {{data.questions[question_nr].id}} von {{data.questions.length}}</h3>
+    <p>{{data.questions[question_nr].text}}</p>
+    <!-- <p>{{data.questions[question_nr].answer}}</p> -->
+  </div>
+  <a ng-click="vote(0);forward();" class="nav nav-forward fa  fa-chevron-right fa-3x"></a>
+</article>
+<article class="confirmationScreen userInput" ng-show="isLastQuestion();">
+  <p>
+    Wenn Sie jetzt fortfahren können Sie ihre Antworten nichtmehr korrigieren.
+  </p>
+</article>
+<div class='userInput' ng-show="isLastQuestion();">
+  <a ng-click="correct();">Korrigieren</a>
+  <a href="#/favorites">Weiter</a>
+</div>
+<div class='userInput' ng-hide="isLastQuestion();">
+  <a ng-click="vote(-1);forward();" class="no">Stimme ich nicht zu.</a>
+  <a ng-click="vote(0);forward();" class="neutral">Neutral</a>
+  <a ng-click="vote(1);forward();" class="yes">Stimme ich zu.</a>
+</div>
