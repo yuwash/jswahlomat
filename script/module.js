@@ -23,7 +23,7 @@ app.config(function($routeProvider) {
 angular.module('myApp').factory('Data', function($http,$routeParams){
   
   var getData = function(){
-    return $http({method:"GET", url:"static/extpages/externalJSON.json"})
+    return $http({method:"GET", url:"alles"})
     .then(function(extern) {
       return extern.data;
     });
