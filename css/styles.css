@@ -1,3 +1,139 @@
+/*body{
+	margin: 0;
+	background-color: #f5f2e3;
+	font-family: arial;
+}
+header{
+	background-color: #66CC00;
+}
+header img{
+	display: block;
+	position: relative;
+    margin: 0;
+    left: 50%;
+    margin-left: -93px;
+}
+main{
+  margin-bottom: 134px;
+}
+main h1{
+	background-color: #55AF03;
+	margin: 0px;
+	padding: 10px;
+	color: #fff;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+main article{
+	background-color: #fff;
+  margin: 10px 10px 200px 10px;
+  box-sizing: border-box;
+}
+main article h2{
+	margin: 0;
+	padding: 10px;
+}    
+main article h3{
+	color: #55AF03;
+  margin: 0px;
+  padding: 10px;
+}
+main article p{
+	padding: 20px 10px;
+	margin: 0;
+}
+@media screen and (min-width: 700px) {
+	main article{
+		position: relative;
+		width: 680px;
+		margin: 10px auto;
+	}
+	main article h2{
+		font-size: 1.7em;
+	}    
+	main article h3{
+		font-size: 1.4em;
+	} 
+	main article p {
+    font-size: 1.2em;
+	}
+}
+main>.buttonBox{
+	position: fixed;
+	bottom: 0;
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 0 10px;
+}
+main .buttonBox a{
+	display: block;
+	box-sizing: border-box;
+	float: left;
+	background-color: #66CC00;
+	text-align: center;
+	padding: 18px;
+	color: #fff;
+	text-decoration: none;
+	cursor: pointer;
+	margin-bottom: 10px;
+	width: 100%;
+}
+.agreeBtn::after{
+		font-family:'FontAwesome';
+		content:"\f055";
+	}
+.disagreeBtn::after{
+	font-family:'FontAwesome';
+	content:"\f056";
+}
+.neutralBtn::after{
+	font-family:'FontAwesome';
+	content:"\f111";
+}
+.nextBtn::after{
+	font-family:'FontAwesome';
+	content:"\f191";
+}
+.prevBtn::after{
+	font-family:'FontAwesome';
+	content:"\f152";
+}
+@media screen and (min-width: 700px) {
+	.agreeBtn::after{
+		font-family: arial;
+		content:"Zustimmung";
+	}
+	.disagreeBtn::after{
+		font-family: arial;
+		content:"Ablehnung";
+	}
+	.neutralBtn::after{
+		font-family: arial;
+		content:"Enthaltung";
+	}
+	.nextBtn::after{
+		font-family: arial;
+		content:"Vor";
+	}
+	.prevBtn::after{
+		font-family: arial;
+		content:"Zurück";
+	}
+}
+main .buttonBox a.row-3{
+	width: 33.33%;
+}
+main .buttonBox a.row-2{
+	width: 50%;
+}
+main .buttonBox a:hover{
+	background-color: #55AF03;
+}
+main .buttonBox a:active{
+	background-color: #2A5C03;*/
+
 /* Layout */
 
 @media (min-width:700px) {
@@ -67,6 +203,12 @@ body {
   background-color: #f5f2e3;
   font-family: arial;
 }
+body *{
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -75,7 +217,7 @@ body {
   width: 100%;
   /* height: 100%; */
 }
-header {
+body>header {
   background-color: #66CC00;
   align-self: stretch;
   /* flex: 1 100%; */
@@ -104,7 +246,7 @@ main, header {
   /* max-height: 50px; */
   /* width: 100vw; */
 }
-main h1 {
+main>h1 {
   background-color: #55AF03;
   margin: 0px;
   padding: 10px;
@@ -254,6 +396,117 @@ main .userInput a:active {
 
 /* Result */
 
+/*<<<<<<< HEAD
+#result ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#result button{
+	cursor: pointer;
+	position: relative;
+	width: 100%;
+	background-color: none;
+	border: none;
+	padding: 0;
+	margin: 10px 0;
+}
+#result button h1{
+	color: #55AF03;
+	background-color: #fff;
+	box-shadow: inset 0 0 0 2px #55AF03;
+}
+
+#result button .bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 43px;
+}
+
+#result .question{
+	cursor: pointer;
+}
+#result .answer{
+	cursor: default;
+}
+#result .negative .question{
+	background-color: #f93;
+}
+#result .positive .question{
+	background-color: #39c;
+}
+#result .party{
+	overflow: hidden;
+}
+#result .answer{
+	overflow: hidden;
+}
+=======*/
+
+/*RESULT*/
+#result .questionBox{
+  margin-bottom: 10px;
+}
+#result .questionBox header{
+  position: relative;
+  height: 48px;
+  cursor: pointer;
+  background-color: #66cc00;
+  color: #fff;
+}
+#result .questionBox.positive header:nth-child(3){
+  background-color: #06c;
+}
+#result .questionBox.negative header:nth-child(3){
+  background-color: #f63;
+}
+#result .questionBox.neutral header:nth-child(3){
+  background-color: #aaa;
+}
+#result .questionBox header i::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: 'FontAwesome';
+  content: "\f054";
+  padding: 16px 18.28px;
+}
+#result .questionBox header i.open::after{
+  content: "\f078";
+  padding: 16px;
+}
+#result .questionBox header h4{
+  position: absolute;
+  top: 0;
+  left: 48px;
+  display: block;
+  padding: 15px;
+  margin: 0;
+  width: calc(100% - 88px);
+}
+#result .questionBox p.question{
+  margin: 0;
+  padding: 10px;
+}
+#result .questionBox p.answer{
+  margin: 0;
+  padding: 10px;
+}
+/*#result .negative .question {
+  background-color: #f93;
+}
+#result .positive .question {
+  background-color: #39c;
+}*/
+
+.errorMessage h3{
+  font-style: italic;
+  color: #f63;
+}
+
+/*---*/
+
 #result ul {
   list-style: none;
   padding: 0;
@@ -264,33 +517,60 @@ main .userInput a:active {
   cursor: pointer;
   position: relative;
   width: 100%;
-  background-color: none;
+  background-color: #fff;
   border: none;
   padding: 0;
   margin: 10px 0;
+  height: 43px;
 }
 #result button h1 {
+  position: absolute;
+  width: 100%;
+  top: 0;
   color: #55AF03;
-  background-color: #fff;
+  background-color: none;
   box-shadow: inset 0 0 0 2px #55AF03;
+  margin: 0px;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
 }
-#result .question {
-  cursor: pointer;
+#result button .bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 43px;
 }
-#result .answer {
-  cursor: default;
-}
-#result .negative .question {
+/*#result .negative .question {
   background-color: #f93;
 }
 #result .positive .question {
   background-color: #39c;
+}*/
+#historyBox{
+  display: none;
 }
-#result .party {
-  overflow: hidden;
-  /*height: 0;*/
-}
-#result .answer {
-  overflow: hidden;
-  /*height: 0;*/
+@media (min-width:700px) {
+  #historyBox{
+    display: block;
+  }
+  #historyBox div{
+    float: left;
+    padding: 22px;
+    margin: 5px;
+    border-radius: 22px;
+    background-color: #aaa;
+  }
+  #historyBox div.active{
+    margin: 13px;
+    padding: 14px;
+    border-radius: 14px;
+  }
+  #historyBox div.positive{
+    background-color: #06c;
+  }
+  #historyBox div.negative{
+    background-color: #f63;
+  }
 }
