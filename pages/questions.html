@@ -1,4 +1,25 @@
 <h1>Befragung</h1>
+<!-- <article ng-hide="isLastQuestion();">
+	<h2>Kategorie: {{data.categories[data.questions[question_nr].cat_id].name}}</h2>
+	<h3>Frage: {{data.questions[question_nr].id}} von {{data.questions.length}}</h3>
+	<p>{{data.questions[question_nr].text}}</p>
+	
+</article>
+<article class="confirmation screen" ng-show="isLastQuestion();">
+	<p>
+		Wenn Sie jetzt fortfahren können Sie
+		ihre Antworten nichtmehr korrigieren.
+		<a href="#/favorites">Weiter</a>
+		<a ng-click="correct();">Korrigieren</a>
+	</p>
+</article>
+<div class="buttonBox">
+	<a ng-click="vote(-1);forward();" class="row-3 disagreeBtn"></a>
+	<a ng-click="vote(0);forward();" class="row-3 neutralBtn"></a>
+	<a ng-click="vote(1);forward();" class="row-3 agreeBtn"></a>
+	<a ng-click="back();" class="row-2 prevBtn"></a>
+	<a ng-click="vote(0);forward();"  class="row-2 nextBtn"></a>
+</div> -->
 <article id='questions' ng-hide="isLastQuestion();">
   <a ng-click="back();" class="nav nav-back fa  fa-chevron-left fa-3x"></a>
   <div class="content">
@@ -6,6 +27,9 @@
     <h3>Frage: {{data.questions[question_nr].id}} von {{data.questions.length}}</h3>
     <p>{{data.questions[question_nr].text}}</p>
     <!-- <p>{{data.questions[question_nr].answer}}</p> -->
+    <div id="historyBox">
+      <div ng-repeat="q in data.questions" ng-click="jumpTo($index);" ng-class="historyBoxStyle($index);"></div>
+    </div>
   </div>
   <a ng-click="vote(0);forward();" class="nav nav-forward fa  fa-chevron-right fa-3x"></a>
 </article>

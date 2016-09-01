@@ -4,7 +4,8 @@
 	{"id":2, "name":"welcometxt", "value":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher "},
 	{"id":3, "name":"accenttitle", "value":"Betonungtitel"},
 	{"id":4, "name":"resultArticle", "value":"Hier steht eine kurze Erklärung zum Ergebnis"},
-	{"id":5, "name":"favoriteArticle", "value":"Hier steht eine kurze Erklärung zu den Favoriten"}
+	{"id":5, "name":"favoriteArticle", "value":"Hier steht eine kurze Erklärung zu den Favoriten"},
+	{"id":6, "name":"favoriteArticle", "value":"eine kurze Fehlermeldung weil der User zuviele Fragen mit Neutral beantwortet hat."}
 ],"categories":[
 	{"id":0, "name":"Sport"},
 	{"id":1, "name":"Essen"}
@@ -17,14 +18,14 @@
 	{
 		"id":1,
 		"cat_id":0,
-		"text":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei?",
+		"text":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei? Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei?",
 		"answer":null,
 		"accent":false,
 		"positions":[
-		{"orientation":1, "argumentation":"Antworttext SPD 01"},
+		{"orientation":1, "argumentation":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei? Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei? Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei?Antworttext SPD 01"},
 		{"orientation":1, "argumentation":"Antworttext CDU 01"},
-		{"orientation":-1, "argumentation":"Lorem ipsum la Bla Bla3"},
-		{"orientation":-1, "argumentation":"Lorem ipsum la Bla Bla4"}]
+		{"orientation":1, "argumentation":"Lorem ipsum la Bla Bla3"},
+		{"orientation":1, "argumentation":"Lorem ipsum la Bla Bla4"}]
 	},
 	{
 		"id":2,
@@ -35,8 +36,8 @@
 		"positions":[
 		{"orientation":1, "argumentation":"Antworttext SPD 02"},
 		{"orientation":-1, "argumentation":"Antworttext CDU 02"},
-		{"orientation":1, "argumentation":"g"},
-		{"orientation":-1, "argumentation":"li"}]
+		{"orientation":-1, "argumentation":"g"},
+		{"orientation":1, "argumentation":"li"}]
 	},
 	{
 		"id":3,
@@ -45,10 +46,10 @@
 		"answer":null,
 		"accent":false,
 		"positions":[
-		{"orientation":-1, "argumentation":"Antworttext SPD 03"},
-		{"orientation":1, "argumentation":"Antworttext CDU 03"},
+		{"orientation":1, "argumentation":"Antworttext SPD 03"},
+		{"orientation":-1, "argumentation":"Antworttext CDU 03"},
 		{"orientation":-1, "argumentation":"g"},
-		{"orientation":-1, "argumentation":"li"}]
+		{"orientation":0, "argumentation":"li"}]
 	},
 	{
 		"id":4,
@@ -58,9 +59,9 @@
 		"accent":false,
 		"positions":[
 		{"orientation":1, "argumentation":"Antworttext SPD 04"},
-		{"orientation":-1, "argumentation":"Antworttext CDU 04"},
-		{"orientation":1, "argumentation":"g"},
-		{"orientation":-1, "argumentation":"li"}]
+		{"orientation":1, "argumentation":"Antworttext CDU 04"},
+		{"orientation":-1, "argumentation":"g"},
+		{"orientation":0, "argumentation":"li"}]
 	},
 	{
 		"id":5,
@@ -69,9 +70,9 @@
 		"answer":null,
 		"accent":false,
 		"positions":[
-		{"orientation":-1, "argumentation":"Antworttext SPD 05"},
-		{"orientation":-1, "argumentation":"Antworttext CDU 05"},
+		{"orientation":1, "argumentation":"Antworttext SPD 05"},
+		{"orientation":1, "argumentation":"Antworttext CDU 05"},
 		{"orientation":-1, "argumentation":"g"},
-		{"orientation":-1, "argumentation":"li"}]
+		{"orientation":0, "argumentation":"li"}]
 	}
 ]}
