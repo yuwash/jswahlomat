@@ -1,7 +1,7 @@
 // --------- Factory ---------
 
 angular.module('myApp').factory('Data', function($http,$routeParams){
-  
+
   var getData = function(){
     return $http({method:"GET", url:"static/extpages/externalJSON.json"})
     .then(function(extern) {
@@ -13,8 +13,8 @@ angular.module('myApp').factory('Data', function($http,$routeParams){
 
 // ---------- Loading function ------------
 
-function myFunction($scope, Data) { 
-    var myDataPromise = Data.getData(); 
+function myFunction($scope, Data) {
+    var myDataPromise = Data.getData();
     myDataPromise.then(function(result) {
       if($scope.data == undefined){
         $scope.data = result;
@@ -22,7 +22,7 @@ function myFunction($scope, Data) {
         var partyCount = [];
         partyCount.length = $scope.data.parties.length;
         partyCount.fill(0);
-        
+
         for(q in $scope.data.questions){
           for(p in $scope.data.parties){
             if($scope.data.questions[q].positions[p].orientation == 0){
@@ -39,7 +39,7 @@ function myFunction($scope, Data) {
           }
         }
       }
-    }); 
+    });
  }
 
  //  ---------- Main Controller ------------
@@ -55,11 +55,11 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope,$routeParams
   myFunction($scope, Data);
 
   $scope.isLastQuestion = function() {
-    return $scope.wasLastQuestion; 
+    return $scope.wasLastQuestion;
   }
 
   $scope.correct = function() {
-    $scope.wasLastQuestion =false; 
+    $scope.wasLastQuestion =false;
   }
 
   $scope.forward  = function() {
