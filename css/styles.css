@@ -33,7 +33,7 @@ main article{
 main article h2{
 	margin: 0;
 	padding: 10px;
-}    
+}
 main article h3{
 	color: #55AF03;
   margin: 0px;
@@ -51,10 +51,10 @@ main article p{
 	}
 	main article h2{
 		font-size: 1.7em;
-	}    
+	}
 	main article h3{
 		font-size: 1.4em;
-	} 
+	}
 	main article p {
     font-size: 1.2em;
 	}
@@ -271,8 +271,11 @@ main article h3 {
   margin: 0px;
 }
 main article p {
-  margin: 10px 2px 0px;
+  margin: 25px 10px 25px;
   font-size: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 50px;
 }
 main .userInput {
   display: flex;
@@ -341,7 +344,7 @@ main .userInput a:active {
   color: #8E8E8E;
 }
 .nav:active {
-  background-color: #2A5C03;
+  /* background-color: #2A5C03; */
 }
 
 
@@ -356,6 +359,13 @@ main .userInput a:active {
 #favorites li {
   cursor: pointer;
   margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: flex;
+  /* color: white; */
+  align-items: center;
+  padding-right: 5px;
 }
 #favorites li p {
   margin: 0;
@@ -363,35 +373,35 @@ main .userInput a:active {
 }
 #favorites i {
   padding: 10px;
-  float: left;
+  /* float: left; */
   margin-right: 6px;
 }
 #favorites span {
   /* margin-left: 0px; */
 }
 #favorites .neutral {
-  background-color: #ccc;
+  background-color: #DCD9D9;
 }
-#favorites .neutral i {
-  background-color: #aaa;
+#favorites .neutral li {
+  /* background-color: #aaa; */
 }
 #favorites .negative {
-  background-color: #f93;
+  background-color: hsla(30,100%,78%,1);
 }
-#favorites .negative i {
+#favorites .negative li {
   background-color: #f63;
 }
 #favorites .positive {
-  background-color: #39c;
+  background-color: hsla(200,60%,82%,1);
 }
-#favorites .positive i {
-  background-color: #06c;
+#favorites .positive li {
+  /* background-color: #06c; */
 }
 #favorites .fa-star {
 
 }
-#favorites .fa-star-o {
-
+#favorites .fa-star {
+color: gold;
 }
 
 /* Result */
@@ -454,6 +464,7 @@ main .userInput a:active {
   cursor: pointer;
   background-color: #66cc00;
   color: #fff;
+  /* padding-bottom: 10px; */
 }
 #result .questionBox.positive header:nth-child(3){
   background-color: #06c;
@@ -462,7 +473,7 @@ main .userInput a:active {
   background-color: #f63;
 }
 #result .questionBox.neutral header:nth-child(3){
-  background-color: #aaa;
+  background-color: rgb(183, 183, 183);
 }
 #result .questionBox header i::after{
   position: absolute;
@@ -484,6 +495,8 @@ main .userInput a:active {
   padding: 15px;
   margin: 0;
   width: calc(100% - 88px);
+  /* padding-bottom: 22px; */
+  /* padding-top: 7px; */
 }
 #result .questionBox p.question{
   margin: 0;
@@ -522,6 +535,7 @@ main .userInput a:active {
   padding: 0;
   margin: 10px 0;
   height: 43px;
+  display: flex;
 }
 #result button h1 {
   position: absolute;
@@ -549,23 +563,37 @@ main .userInput a:active {
   background-color: #39c;
 }*/
 #historyBox{
-  display: none;
+  /* display: flex; */
 }
 @media (min-width:700px) {
   #historyBox{
-    display: block;
+    display: flex;
+    max-width: 580px;
+    align-content: center;
+    min-height: 76px;
+    /* padding-bottom: 5px; */
+    /* padding-top: 15px; */
+    align-items: center;
+    /* margin-top: 15px; */
   }
   #historyBox div{
-    float: left;
-    padding: 22px;
-    margin: 5px;
-    border-radius: 22px;
-    background-color: #aaa;
+    /* float: left; */
+    padding: 5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: #DCD9D9;
+    /* margin-top: 20px; */
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  #historyBox div:hover{
+  	background-color: #8E8E8E;
   }
   #historyBox div.active{
-    margin: 13px;
-    padding: 14px;
-    border-radius: 14px;
+  	height: 15px;
+  	width: 15px;
   }
   #historyBox div.positive{
     background-color: #06c;
