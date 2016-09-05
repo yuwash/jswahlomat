@@ -2,7 +2,7 @@
 <article id="favorites">
 	<h3>Beschreibung</h3>
 	<p>
-		{{data.content_[5].value}}
+		{{data.content_['favoriteArticle']}}
 	</p>
 	<ul>
 		<li ng-repeat="q in data.questions" ng-click="q.accent=!q.accent" class="{{getRating(q.answer)}}">

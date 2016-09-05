@@ -3,7 +3,7 @@
 	<h2>Kategorie: {{data.categories[data.questions[question_nr].cat_id].name}}</h2>
 	<h3>Frage: {{data.questions[question_nr].id}} von {{data.questions.length}}</h3>
 	<p>{{data.questions[question_nr].text}}</p>
-	
+
 </article>
 <article class="confirmation screen" ng-show="isLastQuestion();">
 	<p>
@@ -23,8 +23,8 @@
 <article id='questions' ng-hide="isLastQuestion();">
   <a ng-click="back();" class="nav nav-back fa  fa-chevron-left fa-3x"></a>
   <div class="content">
-    <h2>Kategorie: {{data.categories[data.questions[question_nr].cat_id].name}}</h2>
-    <h3>Frage: {{data.questions[question_nr].id}} von {{data.questions.length}}</h3>
+    <h2>Kategorie: {{ getCategorie(data.questions[question_nr].cat_id) }}</h2>
+    <h3>Frage: {{question_nr}} von {{data.questions.length}}</h3>
     <p>{{data.questions[question_nr].text}}</p>
     <!-- <p>{{data.questions[question_nr].answer}}</p> -->
     <div id="historyBox">

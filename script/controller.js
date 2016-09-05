@@ -3,7 +3,7 @@
 angular.module('myApp').factory('Data', function($http,$routeParams){
 
   var getData = function(){
-    return $http({method:"GET", url:"static/extpages/externalJSON.json"})
+    return $http({method:"GET", url:"/alles"})
     .then(function(extern) {
       return extern.data;
     });
@@ -23,6 +23,12 @@ function myFunction($scope, Data) {
         partyCount.length = $scope.data.parties.length;
         partyCount.fill(0);
 
+        //add accent null to alle questions
+        for(var q in $scope.data.questions ){
+            $scope.data.questions[q].accent = 0;
+            $scope.data.questions[q].answer = 0;
+        }
+        /*
         for(q in $scope.data.questions){
           for(p in $scope.data.parties){
             if($scope.data.questions[q].positions[p].orientation == 0){
@@ -30,6 +36,7 @@ function myFunction($scope, Data) {
             }
           }
         }
+        */
 
         for(var i in $scope.data.parties){
           if(partyCount[i] > $scope.data.questions.length*0.5){
@@ -54,9 +61,19 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope,$routeParams
   // load Data
   myFunction($scope, Data);
 
+  // get categorie of question.cat_id
+  $scope.getCategorie = function(cat_id) {
+      // search cat_id in content.categories array and return categorie name
+      for (var cat in $scope.data.categories) {
+          if (cat_id === $scope.data.categories[cat].id) {
+              return $scope.data.categories[cat].name;
+          }
+      }
+  };
+
   $scope.isLastQuestion = function() {
     return $scope.wasLastQuestion;
-  }
+};
 
   $scope.correct = function() {
     $scope.wasLastQuestion =false;
@@ -119,7 +136,7 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope,$routeParams
   $scope.isPartyTooNeutral = function(id){
     var neutralPartyCounter = 0;
     for(var i=0; i<$scope.data.questions.length; i++){
-      if($scope.data.questions[i].positions[id].orientation == 0){
+      if($scope.data.questions[i].positions[id].vote === 0){
         neutralPartyCounter++;
         if(neutralPartyCounter/$scope.data.questions.length>=0.6){ //TooNeutralPartyExc bei mehr als 40% Neutrale Antworten der Partei
           return true;
@@ -129,10 +146,10 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope,$routeParams
     return false;
   }
 
-  $scope.getTotalPosition = function(id){
+  $scope.getTotalPosition = function(partie){
     var tmp=0;
     for(var i=0; i<$scope.data.questions.length; i++){
-      tmp += $scope.data.questions[i].answer*(1+$scope.data.questions[i].accent) * $scope.data.questions[i].positions[id].orientation;
+        tmp += $scope.data.questions[i].answer*(1+$scope.data.questions[i].accent) * $scope.data.questions[i].positions[partie.id - 1].vote;
     }
     tmp = tmp*100/$scope.data.questions.length;
     if(tmp > 100){
@@ -142,14 +159,21 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope,$routeParams
     }
     return tmp;
   }
-  $scope.loadOrientationStyleH1 = function(id){
-    if(($scope.data.parties[id].tooNeutral || !$scope.isUserTooNeutral())){
+
+  $scope.getTotalPositionRound = function(partie) {
+      // get TotalPosition of totalPostion round to the next full number
+      totalPosition =  $scope.getTotalPosition(partie);
+      return Math.round(totalPosition);
+  }
+
+  $scope.loadOrientationStyleH1 = function(partie){
+    if((partie.tooNeutral || !$scope.isUserTooNeutral())){
       return {
         "color": "#444",
         "box-shadow": "inset 0 0 0 2px #444"
       };
     }
-    var width = $scope.getTotalPosition(id);
+    var width = $scope.getTotalPosition(partie);
     if(width<0){
       return {
         "color": "#900",
@@ -162,16 +186,16 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope,$routeParams
     };
   }
 
-  $scope.getOrientationClass = function(id){
-    var width = $scope.getTotalPosition(id);
+  $scope.getOrientationClass = function(partie){
+    var width = $scope.getTotalPosition(partie);
     if(width<0){
       return "negative";
     }
     return "positive";
   }
 
-  $scope.getBarWidth = function(id){
-    var width = $scope.getTotalPosition(id);
+  $scope.getBarWidth = function(partie){
+    var width = $scope.getTotalPosition(partie);
     if(width<0){
       return {
         "width": Math.abs(width)+"%",
@@ -184,15 +208,15 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope,$routeParams
     };
   }
 
-  $scope.setPartyVisible = function(id){
-    if(id == $scope.visibleParty){
+  $scope.setPartyVisible = function(partie){
+    if(partie.id == $scope.visibleParty){
       $scope.visibleParty = null;
     }else{
-      $scope.visibleParty = id;
+      $scope.visibleParty = partie.id;
     }
   }
 
-  $scope.isPartyVisible = function(id){
-    return id == $scope.visibleParty;
+  $scope.isPartyVisible = function(partie){
+    return partie.id == $scope.visibleParty;
   }
 });

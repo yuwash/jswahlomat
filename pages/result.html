@@ -2,26 +2,26 @@
 <article>
 	<h3>Beschreibung</h3>
 	<p>
-		{{data.content_[4].value}}
+		{{data.content_['resultArticle'].value}}
 	</p>
 </article>
 <article class="errorMessage" ng-if="!isUserTooNeutral()">
 	<h3>Fehler zu Neutral</h3>
 	<p>
-		{{data.content_[6].value}}
+		{{data.content_['neutralWarning']}}
 	</p>
 </article>
 <article id="result">
 	<ul>
 		<li ng-repeat="p in data.parties">
-			<button ng-click="setPartyVisible(p.id)"><div ng-if="!p.tooNeutral" class="bar" ng-style="getBarWidth(p.id);"></div>
-				<h1 ng-style="loadOrientationStyleH1(p.id)">{{p.name}} <b ng-if="(p.tooNeutral || isUserTooNeutral())">{{getTotalPosition(p.id)}}%</b> <b ng-if="p.tooNeutral">(zu neutral)</b></h1>
-				
+			<button ng-click="setPartyVisible(p)"><div ng-if="!p.tooNeutral" class="bar" ng-style="getBarWidth(p);"></div>
+				<h1 ng-style="loadOrientationStyleH1(p)">{{p.name}} <b ng-if="(p.tooNeutral || isUserTooNeutral())">{{ getTotalPositionRound(p) }}%</b> <b ng-if="p.tooNeutral">(zu neutral)</b></h1>
+
 			</button>
 			<ul id="{{'party'+p.id}}" class="party" ng-show="visibleParty==p.id">
 				<li ng-repeat="q in data.questions" class="{{getRating(q.positions[p.id].orientation)}} questionBox" ng-init="visibleQuestion=true">
 					<header ng-click="visibleQuestion=!visibleQuestion">
-						<h4>Frage {{$index+1}} ({{data.categories[data.questions[$index].cat_id].name}})</h4>
+						<h4>Frage {{$index+1}} {{ getCategorie(data.questions[$index].cat_id) }}</h4>
 						<i class="fa" ng-if="visibleQuestion"></i>
 						<i class="fa open" ng-if="!visibleQuestion"></i>
 					</header>
@@ -40,8 +40,3 @@
 	</ul>
 	{{party}}
 </article>
-
-<div class="buttonBox">
-<div class="buttonBox userInput">
-	<a>WEITER</a>
-</div>
