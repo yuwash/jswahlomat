@@ -5,19 +5,11 @@
 		{{data.content_['resultArticle'].value}}
 	</p>
 </article>
-<article class="errorMessage" ng-if="!isUserTooNeutral()">
-	<h3>Fehler zu Neutral</h3>
-	<p>
-		{{data.content_['neutralWarning']}}
-	</p>
-</article>
 <article id="result">
 	<ul>
 		<li ng-repeat="p in data.parties">
-			<button ng-click="setPartyVisible(p)"><div ng-if="!p.tooNeutral" class="bar" ng-style="getBarWidth(p);"></div>
+			<button ng-click="setPartyVisible(p)"><div class="bar" ng-style="getBarWidth(p);"></div>
 				<h1 ng-style="loadOrientationStyleH1(p)">{{p.name}}
-          <b ng-if="(p.tooNeutral || isUserTooNeutral())">{{ getTotalPositionRound(p) }}%</b>
-          <b ng-if="p.tooNeutral">(zu neutral)</b>
         </h1>
 			</button>
 			<ul id="{{'party'+p.id}}" class="party" ng-show="visibleParty==p.id">

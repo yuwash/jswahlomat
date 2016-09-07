@@ -43,7 +43,7 @@
   <a href="#/favorites">Weiter</a>
 </div>
 <div class='userInput' ng-hide="isLastQuestion();">
-  <a ng-click="vote(-1);forward();" class="no">Stimme ich nicht zu.</a>
+  <a ng-click="vote(1);forward();" class="no">Stimme ich nicht zu.</a>
   <a ng-click="vote(0);forward();" class="neutral">Neutral</a>
-  <a ng-click="vote(1);forward();" class="yes">Stimme ich zu.</a>
+  <a ng-click="vote(2);forward();" class="yes">Stimme ich zu.</a>
 </div>

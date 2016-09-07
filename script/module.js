@@ -4,19 +4,29 @@ var app = angular.module('myApp', ['ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider
   .when('/', {
-    templateUrl : 'static/pages/start.html'
+    // TODO fix url befor shiping
+    // templateUrl : 'static/pages/start.html'
+    templateUrl : 'pages/start.html'
   })
   .when('/start', {
-    templateUrl : 'static/pages/start.html'
+    // TODO fix url befor shiping
+    // templateUrl : 'static/pages/start.html'
+    templateUrl : 'pages/start.html'
   })
   .when('/result', {
-    templateUrl : 'static/pages/result.html'
+    // TODO fix url befor shiping
+    // templateUrl : 'static/pages/result.html'
+    templateUrl : 'pages/result.html'
   })
   .when('/questions', {
-    templateUrl : 'static/pages/questions.html'
+    // TODO fix url befor shiping
+    // templateUrl : 'static/pages/questions.html'
+    templateUrl : 'pages/questions.html'
   })
   .when('/favorites', {
-    templateUrl : 'static/pages/favorites.html'
+    // TODO fix url befor shiping
+    // templateUrl : 'static/pages/favorites.html'
+    templateUrl : 'pages/favorites.html'
   })
   .otherwise({redirectTo: '/'});
 });
