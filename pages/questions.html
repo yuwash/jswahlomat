@@ -31,7 +31,7 @@
       <div ng-repeat="q in data.questions" ng-click="jumpTo($index);" ng-class="historyBoxStyle($index);"></div>
     </div>
   </div>
-  <a ng-click="vote(0);forward();" class="nav nav-forward fa  fa-chevron-right fa-3x"></a>
+  <a ng-click="vote(false);forward();" class="nav nav-forward fa  fa-chevron-right fa-3x"></a>
 </article>
 <article class="confirmationScreen userInput" ng-show="isLastQuestion();">
   <p>
@@ -43,7 +43,7 @@
   <a href="#/favorites">Weiter</a>
 </div>
 <div class='userInput' ng-hide="isLastQuestion();">
-  <a ng-click="vote(1);forward();" class="no">Stimme ich nicht zu.</a>
-  <a ng-click="vote(0);forward();" class="neutral">Neutral</a>
-  <a ng-click="vote(2);forward();" class="yes">Stimme ich zu.</a>
+  <a ng-click="vote(0);forward();" class="no">Nein</a>
+  <a ng-click="vote(2);forward();" class="yes">Ja</a>
+  <a ng-click="vote(1);forward();" class="neutral">Enthaltung</a>
 </div>

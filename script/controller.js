@@ -31,7 +31,7 @@ function myFunction($scope, Data) {
             //add accent null to alle questions
             for (var q in $scope.data.questions) {
                 $scope.data.questions[q].accent = 0;
-                $scope.data.questions[q].answer = 0;
+                $scope.data.questions[q].answer = 1;
             }
             /*
             for(q in $scope.data.questions){
@@ -112,8 +112,13 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
     };
 
     $scope.getRating = function(rating) {
-        if (rating == 1) return "positive";
-        if (rating == -1) return "negative";
+        if (rating === 2) {
+            return "positive";
+        } else if (rating === 0) {
+            return "negative";
+        } else if (rating === false) {
+            return "skip";
+        }
         return "neutral";
     };
 
@@ -127,8 +132,6 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         if ($scope.totalPartieMatches === undefined) {
             calcTotalUserMatchPartie();
         }
-
-
         var userMatchValueBase100 = ($scope.totalPartieMatches.map.get(partie.id) / $scope.totalPartieMatches.sum) * 100;
 
         return userMatchValueBase100;
@@ -154,7 +157,7 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         getSumOfMaxQuestionValues(questions);
     }
 
-    function getSumOfMaxQuestionValues(questions){
+    function getSumOfMaxQuestionValues(questions) {
         var totalPartieMatches = $scope.totalPartieMatches;
         for (var qIndex in questions) {
             var question = questions[qIndex];
@@ -166,6 +169,7 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         var questions = $scope.data.questions;
         for (var qIndex in questions) {
             var question = questions[qIndex];
+            //skip question
             addMatches(question, question.positions, questions);
             question.matches.maxQuestionValue = getmaxQuestionValue(question.matches);
         }
@@ -196,6 +200,12 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         var questionValue = "",
             userAnswer = question.answer,
             accent = question.accent;
+
+        //if user skiped the question then skip question in calc
+        if (userAnswer === false) {
+            questionValue = 0;
+            return questionValue;
+        }
 
         if (accent === true) {
             if (userAnswer === 2 && position.vote === 2) {
@@ -238,30 +248,8 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
                 questionValue = 2;
             }
         }
-        if (questionValue !== "") {
-            return questionValue;
-        } else {
-            console.error("Error! questionValue is " + questionValue);
-        }
+        return questionValue;
     }
-
-
-
-
-
-    $scope.getTotalPosition = function(partie) {
-        var tmp = 0;
-        for (var i = 0; i < $scope.data.questions.length; i++) {
-            tmp += $scope.data.questions[i].answer * (1 + $scope.data.questions[i].accent) * $scope.data.questions[i].positions[partie.id - 1].vote;
-        }
-        tmp = tmp * 100 / $scope.data.questions.length;
-        if (tmp > 100) {
-            return 100;
-        } else if (tmp < -100) {
-            return -100;
-        }
-        return tmp;
-    };
 
     $scope.getTotalPositionRound = function(partie) {
         // get TotalPosition of totalposition round to the next full number

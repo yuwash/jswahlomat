@@ -367,6 +367,13 @@ main .userInput a:active {
   align-items: center;
   padding-right: 5px;
 }
+#favorites li.skip {
+    background-color: #DCD9D9;
+    color: rgba(0, 0, 0, 0.45);
+    opacity: 0.3;
+    cursor: none;
+    pointer-events: none;
+}
 #favorites li p {
   margin: 0;
   padding: 10px;
