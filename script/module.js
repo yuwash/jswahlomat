@@ -28,5 +28,10 @@ app.config(function($routeProvider) {
     // templateUrl : 'static/pages/favorites.html'
     templateUrl : 'pages/favorites.html'
   })
+  .when('/impressum', {
+    // TODO fix url befor shiping
+    // templateUrl : 'static/pages/favorites.html'
+    templateUrl : 'pages/impressum.html'
+  })
   .otherwise({redirectTo: '/'});
 });

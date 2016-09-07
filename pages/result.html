@@ -13,13 +13,15 @@
 </article>
 <article id="result">
 	<ul>
-		<li ng-repeat="p in data.parties">
+		<li ng-repeat="p in data.parties" class="results party">
 			<button ng-click="setPartyVisible(p)"><div class="bar" ng-style="getBarWidth(p);"></div>
-				<h1 ng-style="loadOrientationStyleH1(p)">{{p.name}}
+				<h1 ng-style="loadOrientationStyleH1(p)">
+          {{p.name}}
+          {{getUserMatchPartieBase100(p)}}%
         </h1>
 			</button>
-			<ul id="{{'party'+p.id}}" class="party" ng-show="visibleParty==p.id">
-				<li ng-repeat="q in data.questions" class="{{getRating(q.positions[p.id].orientation)}} questionBox" ng-init="visibleQuestion=true">
+			<ul id="{{'party'+p.id}}" class="" ng-show="visibleParty==p.id">
+				<li ng-repeat="q in data.questions" class="questionBox" ng-init="visibleQuestion=true">
 					<header ng-click="visibleQuestion=!visibleQuestion">
 						<h4>Frage {{$index+1}} {{ getCategorie(data.questions[$index].cat_id) }}</h4>
 						<i class="fa" ng-if="visibleQuestion"></i>
@@ -29,7 +31,7 @@
 						{{q.text}}
 					</p>
 					<header ng-hide="visibleQuestion">
-						<h4>Antwort</h4>
+						<h4 class="{{getRating(q.positions[p.id].orientation)}}">Antwort</h4>
 					</header>
 					<p class="answer" ng-hide="visibleQuestion">
 						{{q.positions[p.id].argumentation}}

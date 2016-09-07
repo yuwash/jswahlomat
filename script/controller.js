@@ -134,7 +134,7 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         }
         var userMatchValueBase100 = ($scope.totalPartieMatches.map.get(partie.id) / $scope.totalPartieMatches.sum) * 100;
 
-        return userMatchValueBase100;
+        return Math.round(userMatchValueBase100);
     };
 
     function calcTotalUserMatchPartie() {
@@ -262,13 +262,13 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         //var width = $scope.getTotalPosition(partie);
         if (width < 0) {
             return {
-                "color": "#900",
-                "box-shadow": "inset 0 0 0 2px #900"
+                "color": "white",
+
             };
         }
         return {
-            "color": "#360",
-            "box-shadow": "inset 0 0 0 2px #360"
+            "color": "white",
+
         };
     };
 

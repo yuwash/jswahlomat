@@ -195,13 +195,17 @@ main .buttonBox a:active{
 
 /*-------------------common settings-----------------------*/
 
-html, body {
+html {
   height: 100%;
 }
 body {
   margin: 0;
   background-color: #f5f2e3;
   font-family: arial;
+  display: flex;
+  /* min-height: 100vh; */
+  flex-direction: column;
+  min-height: 100%;
 }
 body *{
   -webkit-user-select: none;
@@ -216,12 +220,15 @@ body *{
   /* justify-content: center; */
   width: 100%;
   /* height: 100%; */
+  flex: 1;
 }
 body>header {
   background-color: #66CC00;
   align-self: stretch;
   /* flex: 1 100%; */
   /* position: absolute; */
+  display: flex;
+  align-content: flex-end;
 }
 header img {
   display: block;
@@ -259,7 +266,7 @@ main>h1 {
 }
 main article {
   background-color: #fff;
-  padding: 10px 5px 10px;
+  padding: 15px 5px 0px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -271,11 +278,11 @@ main article h3 {
   margin: 0px;
 }
 main article p {
-  margin: 25px 10px 25px;
+  margin: 0px 10px 10px;
   font-size: 100%;
   padding-left: 10px;
   padding-right: 10px;
-  min-height: 50px;
+  /* min-height: 50px; */
 }
 main .userInput {
   display: flex;
@@ -287,18 +294,40 @@ main .userInput {
 }
 main .no {
   order: 2;
-  flex-grow: 2;
+  /* flex-grow: 3; */
   /* flex: 1; */
 }
 main .neutral {
   order: 3;
-  flex-grow: 2;
+  /* flex-grow: 1; */
+  /* flex-shrink: 1; */
+  /* background-color: gray; */
 }
 main .yes {
-  order: 4;
-  flex-grow: 2;
+  order: 1;
+  /* flex-grow: 3; */
 }
-main .userInput a {
+div.userInput a.positive {
+ background-color: #66cc00;
+}
+div.userInput a.negativ {
+ background-color: #f93;
+}
+div.userInput a.neutral {
+ background-color: hsl(210, 78%, 78%);
+}
+.negativ {
+  background-color: #f93;
+}
+.positive {
+  background-color: #66cc00;
+}
+.neutral {
+  background-color: hsl(210, 78%, 78%);
+}
+
+
+.userInput > a {
   /* flex: 1; */
   display: block;
   background-color: #66CC00;
@@ -311,6 +340,7 @@ main .userInput a {
   /* margin-right: 5px; */
   margin-top: 5px;
   /* max-height: 56px; */
+  min-width: 133px;
 }
 main .userInput a:hover {
   background-color: #55AF03;
@@ -368,9 +398,9 @@ main .userInput a:active {
   padding-right: 5px;
 }
 #favorites li.skip {
-    background-color: #DCD9D9;
+    background-color: #F7F6F6;
     color: rgba(0, 0, 0, 0.45);
-    opacity: 0.3;
+    opacity: 0.5;
     cursor: none;
     pointer-events: none;
 }
@@ -383,87 +413,18 @@ main .userInput a:active {
   /* float: left; */
   margin-right: 6px;
 }
-#favorites span {
-  /* margin-left: 0px; */
-}
-#favorites .neutral {
-  background-color: #DCD9D9;
-}
-#favorites .neutral li {
-  /* background-color: #aaa; */
-}
-#favorites .negative {
-  background-color: hsla(30,100%,78%,1);
-}
+
 #favorites .negative li {
   background-color: #f63;
 }
-#favorites .positive {
-  background-color: hsla(200,60%,82%,1);
-}
-#favorites .positive li {
-  /* background-color: #06c; */
-}
-#favorites .fa-star {
 
-}
-#favorites .fa-star {
-color: gold;
-}
-
-/* Result */
-
-/*<<<<<<< HEAD
-#result ul{
-	list-style: none;
-	padding: 0;
-	margin: 0;
-}
-#result button{
-	cursor: pointer;
-	position: relative;
-	width: 100%;
-	background-color: none;
-	border: none;
-	padding: 0;
-	margin: 10px 0;
-}
-#result button h1{
-	color: #55AF03;
-	background-color: #fff;
-	box-shadow: inset 0 0 0 2px #55AF03;
-}
-
-#result button .bar{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 43px;
-}
-
-#result .question{
-	cursor: pointer;
-}
-#result .answer{
-	cursor: default;
-}
-#result .negative .question{
-	background-color: #f93;
-}
-#result .positive .question{
-	background-color: #39c;
-}
-#result .party{
-	overflow: hidden;
-}
-#result .answer{
-	overflow: hidden;
-}
-=======*/
 
 /*RESULT*/
 #result .questionBox{
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 #result .questionBox header{
   position: relative;
@@ -472,6 +433,7 @@ main .userInput a:active {
   background-color: #66cc00;
   color: #fff;
   /* padding-bottom: 10px; */
+  /* margin-bottom: 5px; */
 }
 #result .questionBox.positive header:nth-child(3){
   background-color: #06c;
@@ -531,18 +493,19 @@ main .userInput a:active {
   list-style: none;
   padding: 0;
   width: 100%;
-  margin: 0;
+  margin: 0px 0px 0px;
 }
 #result button {
   cursor: pointer;
   position: relative;
   width: 100%;
-  background-color: #fff;
+  background-color: hsla(0,4%,93%,1);
   border: none;
   padding: 0;
-  margin: 10px 0;
+  margin: 0px 0;
   height: 43px;
   display: flex;
+  /* outline: none; */
 }
 #result button h1 {
   position: absolute;
@@ -550,7 +513,7 @@ main .userInput a:active {
   top: 0;
   color: #55AF03;
   background-color: none;
-  box-shadow: inset 0 0 0 2px #55AF03;
+  /* box-shadow: inset 0 0 0 2px #55AF03; */
   margin: 0px;
   padding: 10px 0;
   text-align: center;
@@ -608,4 +571,105 @@ main .userInput a:active {
   #historyBox div.negative{
     background-color: #f63;
   }
+}
+
+footer {
+    background-color: #66CC00;
+    color: white;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    display: flex;
+    align-content: flex-end;
+    align-items: flex-end;
+    height: 20px;
+}
+
+footer article h1 {
+    font-size: 1em;
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+footer article {
+    font-size: 0.8em;
+}
+
+
+header a {
+    color: white;
+    /* align-self: flex-end; */
+    flex-grow:;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    display: flex;
+    margin-left: 2px;
+    text-decoration: blink;
+}
+
+a.impressum {
+    margin-left: auto;
+    /* margin-bottom: 5px; */
+    font-size: 0.7em;
+    margin-right: 5px;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: blink;
+    color: white;
+    /* align-self: flex-end; */
+}
+
+a.impressum:hover {
+    text-decoration: underline;
+}
+article.impressum ul {
+	list-style: none;
+	-webkit-padding-start: 0;
+	padding-left: 10px;
+}
+article.impressum p, article.impressum li{
+	font-size: 0.7em;
+	margin: 0;
+	min-height: 0px;
+}
+
+article.impressum h1 {
+    font-size: 1em;
+}
+article.impressum h2 {
+    font-size: 0.7em;
+}
+
+article.impressum {
+    align-items: baseline;
+}
+
+img {
+    height: 1.5em;
+}
+
+header a span {
+    margin-bottom: 0px;
+    align-self: center;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+
+a {}
+
+
+.results {
+    background-color: hsla(0,4%,93%,1);
+    outline-color: hsla(0,4%,68%,1);
+    outline-style: solid;
+    outline-width: 1px;
+    margin-bottom: 5px;
+    border: none;
+    padding-bottom: 1px;
+}
+
+#result button:hover {
+    outline: hsla(0,4%,68%,1);
+    outline-style: solid;
+    outline-width: 1px;
 }
