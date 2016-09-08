@@ -30,7 +30,7 @@
 					<p class="question" ng-hide="visibleQuestion">
 						{{q.text}}
 					</p>
-					<header ng-hide="visibleQuestion">
+					<header ng-hide="visibleQuestion" class="{{getRating(q.positions[p.id].orientation)}}">
 						<h4 class="{{getRating(q.positions[p.id].orientation)}}">Antwort</h4>
 					</header>
 					<p class="answer" ng-hide="visibleQuestion">

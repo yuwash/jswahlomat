@@ -207,12 +207,7 @@ body {
   flex-direction: column;
   min-height: 100%;
 }
-body *{
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+
 .flex-container {
   display: flex;
   flex-direction: column;
@@ -283,6 +278,7 @@ main article p {
   padding-left: 10px;
   padding-right: 10px;
   /* min-height: 50px; */
+  margin-top: 10px;
 }
 main .userInput {
   display: flex;
@@ -352,6 +348,8 @@ main .userInput a:active {
   display: flex;
   flex-direction: column;
   order: 2;
+  /* align-content: center; */
+  /* align-items: center; */
 }
 .nav {
   background-color: white;
@@ -385,6 +383,8 @@ main .userInput a:active {
   list-style: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 10px;
+  margin-top: 5px;
 }
 #favorites li {
   cursor: pointer;
@@ -417,20 +417,47 @@ main .userInput a:active {
 #favorites .negative li {
   background-color: #f63;
 }
+#favorites .negativ li{
+  background-color: #f93;
+}
+#favorites .positive li{
+  background-color: #66cc00;
+}
+#favorites .neutral li{
+  background-color: hsl(210, 78%, 78%);
+}
 
 
 /*RESULT*/
+/*
+#result .negative header {
+  background-color: #f63;
+}
+#result .positive header {
+  background-color: #66cc00;
+}
+#result .neutral header {
+  background-color: hsl(210, 78%, 78%);
+}
+#result header.skip  {
+  background-color: #F7F6F6;
+  color: black;
+}
+*/
+
 #result .questionBox{
   margin-bottom: 5px;
   margin-top: 5px;
   margin-right: 5px;
   margin-left: 5px;
 }
+#result .questionBox {
+ background-color: #66cc00;
+}
 #result .questionBox header{
   position: relative;
   height: 48px;
   cursor: pointer;
-  background-color: #66cc00;
   color: #fff;
   /* padding-bottom: 10px; */
   /* margin-bottom: 5px; */
@@ -466,6 +493,7 @@ main .userInput a:active {
   width: calc(100% - 88px);
   /* padding-bottom: 22px; */
   /* padding-top: 7px; */
+  font-size: 0.9em;
 }
 #result .questionBox p.question{
   margin: 0;
@@ -537,9 +565,9 @@ main .userInput a:active {
 }
 @media (min-width:700px) {
   #historyBox{
-    display: flex;
+    /* display: flex; */
     max-width: 580px;
-    align-content: center;
+    /* align-content: center; */
     min-height: 76px;
     /* padding-bottom: 5px; */
     /* padding-top: 15px; */
@@ -547,14 +575,14 @@ main .userInput a:active {
     /* margin-top: 15px; */
   }
   #historyBox div{
-    /* float: left; */
+    float: left;
     padding: 5px;
     height: 5px;
     width: 5px;
     border-radius: 50%;
     background-color: #DCD9D9;
     /* margin-top: 20px; */
-    margin-left: 5px;
+    /* margin-left: 5px; */
     margin-right: 5px;
     cursor: pointer;
   }
@@ -562,14 +590,17 @@ main .userInput a:active {
   	background-color: #8E8E8E;
   }
   #historyBox div.active{
-  	height: 15px;
-  	width: 15px;
+  	height: 10px;
+  	width: 10px;
   }
   #historyBox div.positive{
-    background-color: #06c;
+    background-color: #66cc00;
   }
   #historyBox div.negative{
-    background-color: #f63;
+    background-color: #f93;
+  }
+  #historyBox div.neutral{
+    background-color: hsl(210, 78%, 78%);
   }
 }
 
@@ -655,8 +686,6 @@ header a span {
 }
 
 
-a {}
-
 
 .results {
     background-color: hsla(0,4%,93%,1);
@@ -673,3 +702,19 @@ a {}
     outline-style: solid;
     outline-width: 1px;
 }
+
+#legende li {
+    /* cursor: pointer; */
+    margin-bottom: 2px;
+    margin-top: 0;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 5px;
+    /* display: flex; */
+    /* color: white; */
+    /* align-items: center; */
+    /* padding-right: 5px; */
+}
+
+
+header.skip {}

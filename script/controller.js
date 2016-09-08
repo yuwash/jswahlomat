@@ -31,7 +31,7 @@ function myFunction($scope, Data) {
             //add accent null to alle questions
             for (var q in $scope.data.questions) {
                 $scope.data.questions[q].accent = 0;
-                $scope.data.questions[q].answer = 1;
+                $scope.data.questions[q].answer = false;
             }
             /*
             for(q in $scope.data.questions){
@@ -76,6 +76,16 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         $scope.wasLastQuestion = false;
     };
 
+    $scope.newStart = function() {
+        $scope.question_nr = 0;
+        $scope.wasLastQuestion = false;
+        for (var q in $scope.data.questions) {
+            $scope.data.questions[q].accent = 0;
+            $scope.data.questions[q].answer = false;
+            $scope.data.questions[q].matches = {};
+        }
+    };
+
     $scope.forward = function() {
         if ($scope.question_nr < $scope.data.questions.length - 1) {
             $scope.question_nr = $scope.question_nr + 1;
@@ -116,10 +126,12 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
             return "positive";
         } else if (rating === 0) {
             return "negative";
+        } else if (rating === 1) {
+            return "neutral"
         } else if (rating === false) {
             return "skip";
         }
-        return "neutral";
+        return "skip";
     };
 
     /**
@@ -163,11 +175,13 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
 
     // get vaule how user match partie on base of 100
     $scope.getUserMatchPartieBase100 = function(partie) {
-        if ($scope.totalPartieMatches === undefined) {
-            calcTotalUserMatchPartie();
-        }
-        var userMatchValueBase100 = ($scope.totalPartieMatches.map.get(partie.id) / $scope.totalPartieMatches.sum) * 100;
-
+        calcTotalUserMatchPartie();
+        
+        if ($scope.totalPartieMatches.sum === 0) {
+            var userMatchValueBase100 = 0        
+        } else {
+            var userMatchValueBase100 = ($scope.totalPartieMatches.map.get(partie.id) / $scope.totalPartieMatches.sum) * 100;
+        };
         return Math.round(userMatchValueBase100);
     };
 

@@ -1,9 +1,15 @@
 <h1>Favoritenwahl</h1>
 <article id="favorites">
-	<h3>Beschreibung</h3>
-	<p>
-		{{data.content_['favoriteArticle']}}
-	</p>
+	<h3>Hier Ihre Auswahl:</h3>
+  <p>
+    Durch Klicken auf den Stern können Sie bestimmte Fragen priorisieren.
+  </p>
+  <ul id="legende">
+    <li class="positive">Zustimmung</li>
+    <li class="negativ">Ablehnung</li>
+    <li class="neutral">Neutral</li>
+    <li class="skip">Übersprungen</li>
+  </ul>
 	<ul>
 		<li ng-repeat="q in data.questions" ng-click="q.accent=!q.accent" class="{{getRating(q.answer)}}">
 			<i class="accentbox {{getFav(q.accent)}}  fa-fw"></i>
