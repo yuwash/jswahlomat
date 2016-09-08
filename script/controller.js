@@ -5,7 +5,7 @@ angular.module('myApp').factory('Data', function($http, $routeParams) {
     var getData = function() {
         return $http({
                 method: "GET",
-                url: "/alles"
+                url: "extpages/externalJSON.json"
             })
             .then(function(extern) {
                 return extern.data;
@@ -176,9 +176,9 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
     // get vaule how user match partie on base of 100
     $scope.getUserMatchPartieBase100 = function(partie) {
         calcTotalUserMatchPartie();
-        
+
         if ($scope.totalPartieMatches.sum === 0) {
-            var userMatchValueBase100 = 0        
+            var userMatchValueBase100 = 0
         } else {
             var userMatchValueBase100 = ($scope.totalPartieMatches.map.get(partie.id) / $scope.totalPartieMatches.sum) * 100;
         };

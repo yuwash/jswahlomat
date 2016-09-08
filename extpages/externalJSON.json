@@ -1,78 +1,798 @@
-{"content_":[
-	{"id":0, "name":"thema", "value":"Thema der Befragung"},
-	{"id":1, "name":"welcome", "value":"Willkommen"},
-	{"id":2, "name":"welcometxt", "value":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei denn, es kommt zu zufälligen Umständen, in denen Mühen und Schmerz ihm große Freude bereiten können. Um ein triviales Beispiel zu nehmen, wer von uns unterzieht sich je anstrengender körperlicher "},
-	{"id":3, "name":"accenttitle", "value":"Betonungtitel"},
-	{"id":4, "name":"resultArticle", "value":"Hier steht eine kurze Erklärung zum Ergebnis"},
-	{"id":5, "name":"favoriteArticle", "value":"Hier steht eine kurze Erklärung zu den Favoriten"},
-	{"id":6, "name":"favoriteArticle", "value":"eine kurze Fehlermeldung weil der User zuviele Fragen mit Neutral beantwortet hat."}
-],"categories":[
-	{"id":0, "name":"Sport"},
-	{"id":1, "name":"Essen"}
-],"parties":[
-	{"id":0, "name":"SPD"},
-	{"id":1, "name":"CDU"},
-	{"id":2, "name":"Bündnis 90/Die Grünen"},
-	{"id":3, "name":"Die Linke"}
-],"questions":[
-	{
-		"id":1,
-		"cat_id":0,
-		"text":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei? Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei?",
-		"answer":null,
-		"accent":false,
-		"positions":[
-		{"orientation":1, "argumentation":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei? Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei? Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei?Antworttext SPD 01"},
-		{"orientation":1, "argumentation":"Antworttext CDU 01"},
-		{"orientation":1, "argumentation":"Lorem ipsum la Bla Bla3"},
-		{"orientation":1, "argumentation":"Lorem ipsum la Bla Bla4"}]
-	},
-	{
-		"id":2,
-		"cat_id":0,
-		"text":"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot ?",
-		"answer":null,
-		"accent":false,
-		"positions":[
-		{"orientation":1, "argumentation":"Antworttext SPD 02"},
-		{"orientation":-1, "argumentation":"Antworttext CDU 02"},
-		{"orientation":-1, "argumentation":"g"},
-		{"orientation":1, "argumentation":"li"}]
-	},
-	{
-		"id":3,
-		"cat_id":0,
-		"text":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei?",
-		"answer":null,
-		"accent":false,
-		"positions":[
-		{"orientation":1, "argumentation":"Antworttext SPD 03"},
-		{"orientation":-1, "argumentation":"Antworttext CDU 03"},
-		{"orientation":-1, "argumentation":"g"},
-		{"orientation":0, "argumentation":"li"}]
-	},
-	{
-		"id":4,
-		"cat_id":1,
-		"text":"Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot ?",
-		"answer":null,
-		"accent":false,
-		"positions":[
-		{"orientation":1, "argumentation":"Antworttext SPD 04"},
-		{"orientation":1, "argumentation":"Antworttext CDU 04"},
-		{"orientation":-1, "argumentation":"g"},
-		{"orientation":0, "argumentation":"li"}]
-	},
-	{
-		"id":5,
-		"cat_id":1,
-		"text":"Auch gibt es niemanden, der den Schmerz an sich liebt, sucht oder wünscht, nur, weil er Schmerz ist, es sei??",
-		"answer":null,
-		"accent":false,
-		"positions":[
-		{"orientation":1, "argumentation":"Antworttext SPD 05"},
-		{"orientation":1, "argumentation":"Antworttext CDU 05"},
-		{"orientation":-1, "argumentation":"g"},
-		{"orientation":0, "argumentation":"li"}]
-	}
-]}
+{
+  "categories": [
+    {
+      "id": 1, 
+      "name": "Energie & Klimawandel"
+    }, 
+    {
+      "id": 2, 
+      "name": "Wirtschaft & Handel"
+    }, 
+    {
+      "id": 3, 
+      "name": "Ern\u00e4hrung & Landwirtschaft"
+    }, 
+    {
+      "id": 4, 
+      "name": "Mobilit\u00e4t & Verkehr"
+    }
+  ], 
+  "content_": {
+    "accenttitle": "", 
+    "favoriteArticle": "Hier Ihre Auswahl: blau = Zustimmung , orange = Ablehnung, grau = Neutral Durch Klicken auf den Stern k\u00f6nnen Sie bestimmte Fragen priorisieren.", 
+    "neutralWarning": "eine kurze Fehlermeldung weil der User zuviele Fragen mit Neutral beantwortet hat.", 
+    "noteResultArticle": "Selbstverst\u00e4ndnis und Werte der AfD widersprechen den Grundwerten wie Freiheit, Toleranz, Gleichberechtigung und Gewaltlosigkeit, f\u00fcr die Greenpeace einsteht. Greenpeace lehnt es deshalb ab, die Forderungen der AfD im Detail zu bewerten.", 
+    "resultArticle": "Mit diesen Parteien haben sie die gr\u00f6\u00dfte \u00dcbereinstimmung.", 
+    "thema": "Wahl zum Abgeordnetenhaus 2016", 
+    "welcome": "Willkommen", 
+    "welcometxt": "Umweltschutz versprechen alle Parteien im Berliner Abgeordnetenhaus. Wir haben Berliner Spitzenkandidat*innen gefragt, welche konkreten Ziele und Ma\u00dfnahmen sie zur Umweltpolitik verfolgen. Die Fragen stammen aus dem Bereichen Energie & Klimawandel, Wirtschaft & Handel, Ern\u00e4hrung & Landwirtschaft und Verkehr & Mobilit\u00e4t. Mit unserem Wahl-O-Mat k\u00f6nnen sie selbst herausfinden welche Partei zu Ihnen passt."
+  }, 
+  "parties": [
+    {
+      "id": 1, 
+      "name": "CDU"
+    }, 
+    {
+      "id": 2, 
+      "name": "B\u00dcNDNIS 90/DIE GR\u00dcNEN"
+    }, 
+    {
+      "id": 3, 
+      "name": "Die Linke"
+    }, 
+    {
+      "id": 4, 
+      "name": "Piraten"
+    }, 
+    {
+      "id": 5, 
+      "name": "SPD"
+    }
+  ], 
+  "questions": [
+    {
+      "cat_id": 1, 
+      "positions": [
+        {
+          "argumentation": "Wir streben einen Ausstieg aus der Kohleversorgung f\u00fcr das Jahr 2030 an. Der Dialog mit Brandenburg nimmt dabei eine wichtige Rolle ein. Die strukturellen Heraus-forderungen f\u00fcr Regionen, die haupts\u00e4chlich von der Braunkohle leben, sind erheblich und sollten auch bei der Umsetzung der Berliner Ziele nicht zu \u00fcbergangen werden.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja, auf jeden Fall. Wir haben dazu bereits viele parlamentarische Initiativen initiiert bzw. umgesetzt, Gutachten unterst\u00fctzt und arbeiten auch eng mit Initiativen in Berlin und Brandenburg sowie den Brandenburger Gr\u00fcnen zusammen.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, die geplanten Tagebaue sind aus Gr\u00fcnden des Klimaschutzes des Gew\u00e4sser- und des Trinkwasserschutzes nicht zu rechtfertigen. Die Gewinnung und Nutzung der Braunkohleressourcen ist als Grundsatz aus dem gemeinsamen Landesentwicklungsplan zu streichen.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Selbstverst\u00e4ndlich. Als Opposition im Abgeordnetenhaus dr\u00e4ngen wir seit Jahren darauf.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Wir bef\u00fcrworten einen Kohleausstieg auch in Brandenburg und setzen uns sowohl im politischen Dialog mit den Verantwortlichen im Land Brandenburg als auch im Rahmen der gemeinsamen Landesplanung f\u00fcr die Umsetzung dieses Ziels ein.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Soll Berlin in der gemeinsamen Landesplanung auf einen Stopp der geplanten Tagebaue in Brandenburg hinarbeiten?"
+    }, 
+    {
+      "cat_id": 1, 
+      "positions": [
+        {
+          "argumentation": "Aktuell l\u00e4sst das Land Brandenburg eine eigene Sulfatprognose erstellen. Die Ergebnisse dieser Studie sollen im Sommer pr\u00e4sentiert werden. Diese Ergebnisse gilt es abzuwarten und anschlie\u00dfend zu bewerten.", 
+          "orientation": 1, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Ja. Das ist eine \u201etickende Zeitbombe\u201c f\u00fcr die Berliner Wasserversorgung wie auch anderer Kommunen. Wir unterst\u00fctzen das Netzwerk gegen die Sulfatgefahren. Wir wollen, dass an der Quelle durch die Bergbaubetreiber diei Belastung einged\u00e4mmt bzw. beseitigt wird.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Die Lausitzer Tagebaue sind wesentlich verantwortlich f\u00fcr den Anstieg der Sulfatkonzentration im M\u00fcggelsee und dem dort gewonnenen Trinkwasser. In Abstimmung mit Brandenburg und Sachsen sowie dem Bund m\u00fcssen daher die Sulfatbelastung der Spree reduziert und neue Tagebaue verhindert werden.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Die hohen Werte, die zuletzt durch Messungen innerhalb einer Studie des Leibniz-Instituts f\u00fcr Gew\u00e4sser\u00f6kologie und Binnenfischerei (IGB) durchgef\u00fchrt wurden, sind besorgniserregend und m\u00fcssen zu einer Intensivierung politischen Handelns \u00fcber die Landesplanungskonferenz mit Brandenburg f\u00fchren.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Aktuell besteht nach unseren Informationen keine Gefahr f\u00fcr das Berliner Trinkwasser. Die SPD legt jedoch Wert darauf, dass eine nachhaltige Sanierung vor Ort erfolgt, die auch k\u00fcnftig eine Gef\u00e4hrdung der Berliner Wasserversorgung durch Sulfate und andere Fremdstoffe ausschlie\u00dft.", 
+          "orientation": 5, 
+          "vote": 0
+        }
+      ], 
+      "text": "Sehen Sie die Sulfatbelastung durch die Lausitzer Braunkohletagebaue als Gefahr f\u00fcr die Berliner Wasserversorgung?"
+    }, 
+    {
+      "cat_id": 1, 
+      "positions": [
+        {
+          "argumentation": "Fossile Energietr\u00e4ger sind g\u00fcnstige und leistungsstarke Energiequellen. Sie werden noch einige Jahre die erforderliche Sicherheit garantieren, um die Umstellung auf erneuerbare Energien umsetzen zu k\u00f6nnen. Wir streben einen Ausstieg aus der Braunkohle bis zum Jahr 2020 und einen Ausstiegi aus der Steinkohle bis zum Jahr 2030 an.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja. Wir fordern, dass die bestehende Braun- und Steinkohleverstromung in Berlin an den Standorten Reuter C und Klingenberg sp\u00e4testens im Jahr 2020 beendet wird sowie einen kompletten Ausstieg aus der Kohleverstromung und -w\u00e4rmegewinnung in Berlini bis sp\u00e4testens 2030.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, zur Erreichung der Klimaschutzziele sind die Kohlekraftwerke Berlins schnellstm\u00f6glich stillzulegen, im Fall der Steinkohle nach M\u00f6glichkeit bis 2025, sp\u00e4testens aber bis 2030. Um die W\u00e4rmeversorgung sicherzustellen sindi entsprechende Ersatzinvestitionen zu t\u00e4tigen.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Die SPD setzt sich f\u00fcr einen schnellstm\u00f6glichen Ausstieg aus der Braun- und Steinkohlef\u00f6rderung und diesbez\u00fcglichen Kraftwerksnutzung ein.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Bef\u00fcrworten Sie ein Abschalten des Braunkohlekraftwerks Klingenberg bis 2020 und der Berliner Steinkohlekraftwerke bis 2025?"
+    }, 
+    {
+      "cat_id": 1, 
+      "positions": [
+        {
+          "argumentation": "Wir unterst\u00fctzen die Energiewende und wollen eine langfristig sichere, umweltvertr\u00e4gliche und bezahlbare Energieversorgung, die uns unabh\u00e4ngiger von fossilen Energietr\u00e4gern macht. Allerdings k\u00f6nnen wir diesen Prozess vorerst nicht ohne die Mithilfe der fossilen Energietr\u00e4ger bew\u00e4ltigen.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja. Wir haben durch parlamentarische Initiativen erreicht, dass die Berliner Beschaffungsstellen gr\u00f6\u00dfere Anteile von \u00d6kostrom beziehen. Wir wollen die Mindestvorgaben von 20% versch\u00e4rfen und den Bezug von \u00d6kostrom durch ein starkes Klimastadtwerk signifikant erh\u00f6hen.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Allerdings soll der Strombezug auch tats\u00e4chlich zum Ausbau Erneuerbarer Energien beitragen. Die Ausschreibung kann sich hierzu an den Empfehlungen des Umweltbundesamtes orientieren. Ein begrenzter Anteil von Strom aus gasbefeuerten, hocheffizienten KWK-Anlagen sollte m\u00f6glich sein.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Wir setzen uns f\u00fcr eine deutliche Erh\u00f6hung des Anteils von \u00d6kostrom in der \u00f6ffentlichen Verwaltung ein, jedoch wird das Ziel eines 100-prozentigen \u00d6kostrombezuges bis zum Jahr 2020 noch nicht zu erreichen sein.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Sind Sie f\u00fcr den Bezug von 100 % \u00d6kostrom durch die \u00f6ffentliche Hand bis 2020?"
+    }, 
+    {
+      "cat_id": 1, 
+      "positions": [
+        {
+          "argumentation": "Wir wollen die energetische Sanierung von Geb\u00e4uden vorantreiben. Die \u00f6ffentliche Hand muss mit gutem Beispiel voran gehen: Die Sanierung landeseigener Geb\u00e4ude und die Versorgung mit \u00d6kostrom sind dabei ein wichtiger Bestandteil.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja, das entspricht auch den von allen Parteien getragenen Empfehlungen der Enquete-Kommission \u201eNeue Energie f\u00fcr Berlin\u201c - u.a. werden wir die entsprechenden Aktivit\u00e4ten des Klimastadtwerks forcieren und die Umsetzung eines \u201eMasterplans Solarhauptstadt\u201c unter- st\u00fctzen.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Das Land und die Bezirke sollten bei der Installation von Solaranlagen eine Vorreiterrolle einnehmen um endlich das Potential f\u00fcr Photovoltaik und Solarthermie in Berlin zu nutzen. Auf allen geeigneten \u00f6ffentlichen Geb\u00e4uden sollen Solaranlagen installiert werden.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, wir unterst\u00fctzen das Ziel, die Berliner Geb\u00e4ude der \u00f6ffentlichen Hand mit Photovoltaikanlagen auszustatten.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Unterst\u00fctzen Sie das Vorhaben, die Berliner Geb\u00e4ude der \u00f6ffentlichen Hand mit Photovoltaikanlagen auszustatten?"
+    }, 
+    {
+      "cat_id": 1, 
+      "positions": [
+        {
+          "argumentation": "Wir k\u00f6nnen und m\u00fcssen unsere CO2-Emissionen senken \u2013 mit dem kommenden Energiewendegesetz, dem dazu geh\u00f6renden Berliner Energie- und Klimaschutzprogramm und der Enquete-Kommission \u201eNeue Energie f\u00fcr Berlin\u201c hat Berlin bereits ehrgeizige Ziele formuliert sowie die ersten notwendigen Schritte gemacht.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Oberstes Ziel ist die Erreichung von Klimaneutralit\u00e4t und die Umsetzung einer ambitionierten Energiewende in Berlin. Dies wird zusammen mit der Erweiterung des Berliner Energie- und Klimaschutzprogramms in der n\u00e4chsten Legislatur ein Schwerpunkt unserer Arbeit sein.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "DIE LINKE will die Anpassung der Klimaschutzziele und der Strategie an das 1,5-Grad-Ziel von Paris. Sollen die Pariser Klimaziele erreicht werden, d\u00fcrfen die Beschl\u00fcsse nicht nur eine Absichtserkl\u00e4rung bleiben, sondern m\u00fcssen auch in Ma\u00dfnahmen umgesetzt werden.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Die momentanen Bestrebungen f\u00fcr den Klimaschutz reichen nicht aus.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Die SPD setzt sich daf\u00fcr ein, dass das Land Berlin zur \u201eDivestment-Hauptstadt\u201c der Welt wird. Ziel soll sein, Anlagen aus Unternehmen, deren Gesch\u00e4ftsmodell dem Ziel der Klimaneutralit\u00e4t widersprechen, innerhalb der n\u00e4chsten f\u00fcnf Jahre abzuziehen und diese Investitionen in Zukunft durch Anlagerichtlinien auszuschlie\u00dfen.", 
+          "orientation": 5, 
+          "vote": 1
+        }
+      ], 
+      "text": "Soll Berlin in der n\u00e4chsten Legislaturperiode seine Klimaschutzstrategie an das 1,5-Grad-Ziel anpassen?"
+    }, 
+    {
+      "cat_id": 1, 
+      "positions": [
+        {
+          "argumentation": "Entscheidend f\u00fcr das Gelingen der Energiewende bei der W\u00e4rmeversorgung ist die energetische Sanierung des Geb\u00e4udebestandes. Auch in Berlin besteht weiterer Handlungsbedarf zur Erh\u00f6hung der Energieeffizienz im Geb\u00e4udebestand.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja. Wir werden f\u00fcr ein W\u00e4rmegesetz k\u00e4mpfen, das klare Vorgaben f\u00fcr die Einsparung von W\u00e4rmeenergie im Geb\u00e4udebestand, den Ausbau erneuerbarer W\u00e4rme sowie die Regulierung der Fernw\u00e4rmenetze macht. Dabei sind die besonderen sozialen Bedingungen Berlins zu ber\u00fccksichtigen.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Wir sind f\u00fcr klare gesetzliche Vorgaben f\u00fcr den Ausbau Erneuerbarer Energien und f\u00fcr die Einsparung von W\u00e4rmeenergie im Berliner Geb\u00e4udebestand. Als Ersatzma\u00dfnahme sollte die Erstellung qualifizierter Sanierungsfahrpl\u00e4ne angerechnet werden.", 
+          "orientation": 3, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Die SPD verfolgt das Ziel, Berlin bis zum Jahr 2050 zu einer klimaneutralen Stadt zu entwickeln. Hierf\u00fcr wurden bereits strategische Prinzipien und Handlungsfelder im Rahmen des Berliner Energie- und Klimaschutzprogramms erarbeitet.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Sind Sie f\u00fcr einen verpflichtenden Ausbau von Erneuerbaren Energien f\u00fcr die W\u00e4rmeversorgung in Bestandsgeb\u00e4uden?"
+    }, 
+    {
+      "cat_id": 1, 
+      "positions": [
+        {
+          "argumentation": "Wir vertreten die Position, dass vor einer m\u00f6glichen Rekommunalisierungsentscheidung konkrete \u00f6kologische, wirtschaftliche, soziale und demokratiepolitische Ziele eindeutig zu definieren sind. Sowohl mit Blick auf den Kaufpreis, die Unternehmensstruktur als auch die Zielsetzung des Landes.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja. Dazu soll das Stromnetz vom Land Berlin zusammen mit der Genossenschaft B\u00fcrgerEnergie Berlin \u00fcbernommen werden. Wenn es im laufenden Verfahren oder nach m\u00f6glichem Abbruch dazu in der neuen Legislaturperiode Spielr\u00e4ume gibt, werden wir diese nutzen.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. W\u00e4hrend f\u00fcr private Netzbetreiber das Erzielen einer h\u00f6chstm\u00f6glichen Rendite im Vordergrund steht, erm\u00f6glichen rekommunalisierte Energienetze die Ausrichtung der Gesch\u00e4ftspolitik an den energie-, wirtschafts-, sozial- und demokratiepolitischen Zielen des Landes.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Energie darf kein Luxus und Spekulationsobjekt sein. Wir wollen, dass die Berlinerinnen und Berliner Zugang zu sauberer, verl\u00e4sslicher und bezahlbarer Energie haben. Nach den Wasserbetrieben wollen wir auch das Strom- und das Gasnetz sowie die Fernw\u00e4rmenetze rekommunalisieren.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Sind Sie f\u00fcr die Rekommunalisierung des Berliner Stromnetzes?"
+    }, 
+    {
+      "cat_id": 2, 
+      "positions": [
+        {
+          "argumentation": "Wir vertreten die Position, dass vor einer m\u00f6glichen Rekommunalisierungsentscheidung konkrete \u00f6kologische, wirtschaftliche, soziale und demokratiepolitische Ziele eindeutig zu definieren sind. Sowohl mit Blick auf den Kaufpreis, die Unternehmensstruktur als auch die Zielsetzung des Landes.", 
+          "orientation": 1, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Wir wollen einen Welthandel, der fair ist und hohen sozialen und \u00f6kologischen Standards entspricht. Deshalb wollen wir TTIP, CETA und TISA stoppen und auf demokratischer und transparenter Grundlage neu verhandeln.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, Berlin muss sich unbedingt gegen TTIP, CETA und TiSA positionieren. Privatisierungszwang der \u00f6ffentlichen Daseinsvorsorge, Abbau von Rechten f\u00fcr Arbeitnehmer*innen und Verbraucher*innen sind f\u00fcr uns nicht hinnehmbar.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Die PIRATEN Berlin lehnen TTIP, TISA sowie CETA als intransparent, undemokratisch und auf die Interessen der multinationalen Konzerne zugeschnitten ab. TTIP und CETA bedrohen Daseinsvorsorge und Rekommunalisierung. Das Umgehen der Parla- mente hebelt die demokratischen Kontrollen aus.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Soll sich Berlin \u00f6ffentlich gegen TTIP und CETA positionieren?"
+    }, 
+    {
+      "cat_id": 2, 
+      "positions": [
+        {
+          "argumentation": "Plastikt\u00fcten werden hierzulande zumeist \u00fcber Recyclingsysteme umweltvertr\u00e4glich entsorgt. Sinnvoller als ein Verbot ist die freiwillige Selbstverpflichtung des Einzelhandels. Wir begr\u00fc\u00dfen, dass Einzelh\u00e4ndler zunehmend auf Plastikt\u00fcten verzichten.", 
+          "orientation": 1, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Wir setzen auf Mehrwegbeutel. Da nach deutschem und europ\u00e4ischem Recht das Inverkehrbringen von Verpackungen nur unter engen Ausnahmen begrenzt oder besteuert werden kann, werden wir pr\u00fcfen, welche rechtlichen M\u00f6glichkeiten Berlin besitzt.", 
+          "orientation": 2, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja, wenn Ma\u00dfnahmen wie eine Ressourcenabgabe auf Kunststoffe und eine Pfandpflicht f\u00fcr alle Kunststoffverpackungen, zu denen es problemlose Alternativen gibt, nicht greifen. Als ersten Schritt fordern wir ein Verbot der kostenlosen Abgabe von Plastikt\u00fcten.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Die Auswirkungen, die Plastikt\u00fcten \u00fcber Mikroplastik verursachen, das erst nach ca. 600 Jahren verrottet und \u2013 insbesondere \u00fcber die Meere \u2013 Lebensr\u00e4ume zerst\u00f6rt und Lebewesen t\u00f6tet bzw. \u00fcber die Nahrungskette den Weg zur\u00fcck auf unsere Teller finden, m\u00fcssen best- und schnellstm\u00f6glich minimiert werden.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Wir begr\u00fc\u00dfen die Initiative der Bundes- umweltministerin und des Handelsverbands Deutschland, die Zahl der Plastikt\u00fcten durch eine Geb\u00fchr des Einzelhandels auf die Ausgabe von T\u00fcten, drastisch zu senken. Sowohl zum Schutz der Meere als auch zur Verbesserung des Gesundheitsschutzes ist dies dringend notwendig.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Sind Sie f\u00fcr ein Verbot von Plastikt\u00fcten im Handel?"
+    }, 
+    {
+      "cat_id": 2, 
+      "positions": [
+        {
+          "argumentation": "Es ist richtig und wichtig, Nachhaltigkeitsaspekte bei der Beschaffung von Produkten f\u00fcr den \u00f6ffentlichen Dienst zu beachten. In Berlin erfolgen Beschaffungen grunds\u00e4tzlich entsprechend dem Berliner Ausschrei- bungs- und Vergabegesetz nach wirtschaft- lichen, sozialen und \u00f6kologischen Erw\u00e4gungen.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja. Wir wollen Berlin zur Hauptstadt des fairen Handels machen. Dazu reformieren wir das Vergabegesetz, f\u00fchren insbesondere die alte Wertgrenze wieder ein und st\u00e4rken die Nachweis- und Kontrollpflicht, erg\u00e4nzt durch eine regelm\u00e4\u00dfige Evaluation der Praxis.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, allerdings auch f\u00fcr Beschaffungen generell. Das auch von der LINKEN eingef\u00fchrte Ausschreibungs- und Vergabegesetz enth\u00e4lt bereits Regelungen zur \u00f6kologischen Beschaffung. Allerdings hat der Senat die Wertgrenzen erh\u00f6ht und viele Ausnahmen formuliert. Dies muss k\u00fcnftig wieder anders werden.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, durchaus. Neben der Funktionalit\u00e4t sollten auch \u00f6kologische und soziale Standards eine Rolle spielen.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Sollen \u00f6kologische und soziale Standards bei der Beschaffung von Stoffen und Kleidung f\u00fcr den \u00f6ffentlichen Dienst verpflichtend werden?"
+    }, 
+    {
+      "cat_id": 2, 
+      "positions": [
+        {
+          "argumentation": "Nein. Keine deutsche Bewertungsbeh\u00f6rde hat sich f\u00fcr ein Verbot von Glyphosat ausgesprochen. Dem ist auch die Europ\u00e4ische Beh\u00f6rde f\u00fcr Lebensmittel-sicherheit (EFSA) gefolgt, ebenso wie die Bewertungs-beh\u00f6rden der \u00fcbrigen 28 Mitgliedstaaten.", 
+          "orientation": 1, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Ja. Wir wollen Berlin pestizidfrei machen und setzen uns f\u00fcr ein bundes- und EU-weites Verbot von Glyphosat ein. Unsere AGH-Fraktion hat den Senat in dieser Legislatur mehrfach aufgefordert, auf den Einsatz von Pestiziden auf allen landeseigenen Fl\u00e4chen zu verzichten", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, solange Zweifel bestehen, muss das Vorsorgeprinzip gelten und darf die Zulassung des laut IARC wahrscheinlich krebserregenden Glyphosat nicht verl\u00e4ngert werden. DIE LINKE fordert schon lange ein Verbot in der Vorerntebehandlung und auf privaten und kommunalen Fl\u00e4chen.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "\u00dcber die Frage, ob und wie lange die Zulassung f\u00fcr das Pflanzenschutzmittel Glyphosat verl\u00e4ngert wird, entscheidet der Fachausschuss der EU-Kommission mit qualifizierter Mehrheit. Wir teilen die kritische Haltung vieler Experten hinsichtlich der gesundheitlichen Risiken von Glyphosat.", 
+          "orientation": 5, 
+          "vote": 1
+        }
+      ], 
+      "text": "Soll sich das Land Berlin f\u00fcr ein deutschlandweites Verbot von Glyphosat einsetzen?"
+    }, 
+    {
+      "cat_id": 3, 
+      "positions": [
+        {
+          "argumentation": "St\u00e4dtisches Gr\u00fcn ist unverzichtbar. Wir brauchen die Stra\u00dfenb\u00e4ume und \u2013beete sowie G\u00e4rten und Parks nicht nur aus \u00f6kologischer oder \u00e4sthetischer Sicht. Sie haben auch einen hohen sozialen Wert. Jenseits der traditionellen Kleingartenstrukturen begr\u00fc\u00dfen wir weitere Formen des st\u00e4dtischen G\u00e4rtnerns in Berlin.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja. Wir wollen urbanes G\u00e4rtnern in der gesamten Stadt f\u00f6rdern und zusammen mit den Bezirken daf\u00fcr weitere Fl\u00e4chen \u2013 auch als Zwischennutzung \u2013 ausweisen. Nach dem Vorbild anderer St\u00e4dte wie New York und Stuttgart setzen wir eine*n Beauftragte*n f\u00fcr Urban Gardening ein.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Wir wollen einen Stadtentwicklungsplan Gr\u00fcn aufstellen, der neben Urban Gardening auch Gr\u00fcn- und Parkanlagen, Gr\u00fcnz\u00fcge und Landschaftsparks, Wald, Schutzgebiete, Friedh\u00f6fe, Kleing\u00e4rten und Stra\u00dfen- b\u00e4ume umfasst.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Auch in Zusammenarbeit mit sich f\u00fcr das Urban Gardening \u00f6ffnenden Kleingartenkolonien. Hierf\u00fcr bef\u00fcrworten wir die Einrichtung eines unabh\u00e4ngigen Urban-Gardening-Beauftragten.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Berlinerinnen und Berliner lieben das Gr\u00fcn in ihrer Stadt. Sie bringen sich durch ihr ehrenamtliches Engagement direkt vor Ort ein, um das Stra\u00dfenbild vor ihrer Haust\u00fcr zu versch\u00f6nern. Wir unterst\u00fctzen daher die Initiative des Urban Gardenings ausdr\u00fccklich.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Sollen in Berlin mehr Fl\u00e4chen f\u00fcr Urban Gardening ausgewiesen werden?"
+    }, 
+    {
+      "cat_id": 3, 
+      "positions": [
+        {
+          "argumentation": "Wir wollen, dass die Menschen sich im Alltag gesund ern\u00e4hren k\u00f6nnen, und setzen uns daf\u00fcr ein, dass in Kantinen ein gutes und vollwertiges Essen in hoher Qualit\u00e4t angeboten wird.Vorgaben f\u00fcr bestimmte Lebensmittel oder Produktionsverfahren werden wir nicht machen.", 
+          "orientation": 1, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Ja. Wir wollen urbanes G\u00e4rtnern in der gesamten Stadt f\u00f6rdern und zusammen mit den Bezirken daf\u00fcr weitere Fl\u00e4chen \u2013 auch als Zwischennutzung \u2013 ausweisen. Nach dem Vorbild anderer St\u00e4dte wie New York und Stuttgart setzen wir eine*n Beauftragte*n f\u00fcr Urban Gardening ein.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. In Kindertagesst\u00e4tten, Schulen, Kantinen, Mensen und beim Catering in \u00f6ffentlichen Ein - richtungen wollen wir den Anteil der regionalen und \u00f6kologischen Lebensmittel steigern und den Anteil an Bio - Essen bis 2021 verdoppeln.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Ein gesundes und nachhaltiges Essensangebot muss mittelfristig fl\u00e4chendeckend angeboten werden.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "F\u00fcr eine gesunde Ern\u00e4hrung in Schulen und Kitas werden staatliche Zusch\u00fcsse und Elternbeitr\u00e4ge aufgewendet, die den Bezug von Produkten aus \u00f6kologischer Erzeugung erm\u00f6glichen.Wir werden auch k\u00fcnftig die Tr\u00e4ger in ihrer Entscheidung unterst\u00fctzen, die Verpflegung in ihren Einrichtungen umzustellen.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Sind Sie daf\u00fcr, dass \u00f6ffentliche Einrichtungen, Kindertagesst\u00e4tten und Schulen auf Produkte aus \u00f6kologischer und regionaler Erzeugung umstellen?"
+    }, 
+    {
+      "cat_id": 3, 
+      "positions": [
+        {
+          "argumentation": "Kantinen sollen gutes, vollwertiges Essen in hoher Qualit\u00e4t anbieten, d.h. auch vegetarische und vegane Gerichte. Dabei ist es sinnvoll, dass Kantinenbetreiber in den Dialog mit ihren Kunden \u00fcber deren W\u00fcnsche treten und diese entsprechend ber\u00fccksichtigen.", 
+          "orientation": 1, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Ja. Wir setzen uns daf\u00fcr ein, dass es in \u00f6ffentlichen Kantinen t\u00e4glich auch ein Angebot an veganen und vegetarischen Mahlzeiten gibt.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja \u2013 Nur ein veganes Angebot greift aber zu kurz. Verpflegung in \u00f6ffentlichen Einrichtungen, wie in Kitas, Schulen, Krankenh\u00e4usern und Seniorenheimen, muss gesundheitliche (Unvertr\u00e4glichkeiten, Allergien) und kulturelle (Koscher, Halal) Anforderungen und Ern\u00e4hrungsstile ber\u00fccksichtigen.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Entsprechende Antr\u00e4ge haben wir bereits in das Abgeordnetenhaus eingebracht. Diese wurden allerdings von der Koalition abgelehnt. Der Vegetarier*innen und Veganer*innen-Anteil in Berlin steigt zurecht, da diese Art der Ern\u00e4hrung einen gro\u00dfen Beitrag zum Klima- und Tierschutz bringen.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Wir begr\u00fc\u00dfen es, wenn sich das Angebot an \u00f6ffentlichen Kantinen st\u00e4rker an \u00f6kologischen Aspekten und der regionalen Produktion ausrichtet. Wir sind jedoch sehr skeptisch, was verpflichtende Vorgaben angeht. Kantinenbesucher schauen oftmals auf den Preis bzw. bleiben gewohnten Angeboten treu.", 
+          "orientation": 5, 
+          "vote": 0
+        }
+      ], 
+      "text": "Soll es in \u00f6ffentlichen Kantinen ein verpflichtendes veganes Angebot geben?"
+    }, 
+    {
+      "cat_id": 3, 
+      "positions": [
+        {
+          "argumentation": "Wir stehen f\u00fcr Transparenz und Null-Toleranz bei Lebensmitteln mit einer klaren Kennzeichnung. Das bedeutet auch, dass Hygieneverst\u00f6\u00dfe und Grenzwert- \u00fcberschreitungen ver\u00f6ffentlicht werden. Um ihre wichtigen Kontrollfunktionen wahrzunehmen, m\u00fcssen die Beh\u00f6rden gut ausgestattet sein. Daf\u00fcr setzen wir uns ein.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Noch wichtiger als mehr Personal f\u00fcr die Lebensmittelkontrollen ist uns deren Transparenz. Darum werden wir ein berlinweites Verbraucherschutz-Systems in Restaurants und Gastst\u00e4tten nach d\u00e4nischem Vorbild z.B. in Form eines Smileys einf\u00fchren.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Zur Gew\u00e4hrleistung gesetzlicher Vorgaben und der Lebensmittelsicherheit muss das Personal der Veterin\u00e4r- und Lebensmittelaufsichts\u00e4mter in Berlin deutlich aufgestockt werden. Es braucht bessere Fortbildungen f\u00fcr die Fachkr\u00e4fte und eine bessere technische Ausstattung.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, grunds\u00e4tzlich muss der Personalschl\u00fcssel in den Veterin\u00e4r und Lebensmittel\u00e4mtern der Bezirke erh\u00f6ht werden, da diese teilweise nur 30-50% ihrer Pflichtaufgaben wahrnehmen k\u00f6nnen. Dieser Zustand ist unhaltbar.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Wir wollen eine effektivere Lebensmittel- kontrolle auch vor Ort. Wir werden bei den n\u00e4chsten Haushaltsberatungen pr\u00fcfen, ob und ggf. in welcher H\u00f6he die Bezirke eine Erh\u00f6hung der Personalmittel zur Verst\u00e4rkung der Veterin\u00e4r- und Lebensmittel\u00e4mter einsetzen werden.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Soll das Personal zur Kontrolle von Lebensmitteln in Berlin aufgestockt werden?"
+    }, 
+    {
+      "cat_id": 3, 
+      "positions": [
+        {
+          "argumentation": "Im Auftrag der Bundesregierung wurden Qualit\u00e4tsstandards f\u00fcr die Gemeinschaftsverpflegung entwickelt. Diese wollen wir \u00fcberall durchsetzen. Vorgaben f\u00fcr bestimmte Lebensmittel oder Produktionsverfahren werden wir aber nicht machen.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja. Wir werden uns daf\u00fcr einsetzen, dass in \u00f6ffentlichen Kantinen in erster Linie Fisch und Meeresfr\u00fcchte aus nachhaltiger Fischerei angeboten werden.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja \u2013 Fisch aus nachweislich nachhaltigem Fang sollte eine Selbstverst\u00e4ndlichkeit in \u00f6ffentlichen Kantinen sein. Das muss in den Ausschreibungen und Leistungsverzeichnissen vorgegeben werden.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Unseres Erachtens nach gibt es kein nachhaltiges Fischangebot. Am besten w\u00e4re es, f\u00fcr eine gewisse Zeit das Angebot an Fisch stark einzuschr\u00e4nken bzw. ganz darauf zu verzichten. Ansonsten: Ja.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Soll in \u00f6ffentlichen Kantinen auf ein nachhaltiges Fischangebot umgestellt werden?"
+    }, 
+    {
+      "cat_id": 3, 
+      "positions": [
+        {
+          "argumentation": "Wir setzen uns nachdr\u00fccklich f\u00fcr eine nachhaltige Fischerei von Haien und einen verst\u00e4rkten Schutz von gef\u00e4hrdeten Haiarten ein. Deshalb begr\u00fc\u00dfen wir insbesondere den EU-Haiaktionsplan sowie die EU- Finning-Verordnung ausdr\u00fccklich.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Da das Lebensmittelrecht in der konkurrierenden Gesetzgebungszust\u00e4ndigkeit des Bundes liegt und zudem von europarechtlichen Vorgaben bestimmt wird, werden wir pr\u00fcfen, welchen Spielraum das Land Berlin f\u00fcr ein Verbot bestimmter Lebensmittelprodukte besitzt.", 
+          "orientation": 2, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Ja \u2013 Auch das kann in den Ausschreibungen und Leistungsverzeichnissen vorgegeben werden. Viele Verbraucherinnen und Verbraucher wissen nicht, dass sie Hai-Produkte essen und kennen die qu\u00e4lerischen Fangmethoden nicht. Es braucht eine klare Lebensmittel- Kennzeichnung in Kantinen.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Am besten bundes- bzw. europaweit.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ein berlinweites Verbot von Haiprodukten w\u00fcrde angesichts des ohnehin sehr begrenzten regionalen Verzehrs nichts am Grundproblem \u00e4ndern. Was wir brauchen, ist ein international gemeinsames Vorgehen gegen die \u00dcberfischung der Meere und das dadurch bedingte Aussterben bestimmter Fischarten.", 
+          "orientation": 5, 
+          "vote": 1
+        }
+      ], 
+      "text": "Soll der Verkauf von Haiprodukten wie Schillerlocke und Haifischflossensuppe in Berlin verboten werden?"
+    }, 
+    {
+      "cat_id": 4, 
+      "positions": [
+        {
+          "argumentation": "Berlin braucht leistungsf\u00e4hige Hauptverkehrs- stra\u00dfen. Die Verkehre k\u00f6nnen nur bei Tempo 50 bedarfsgerecht und fl\u00fcssig abgewickelt werden. Weitere Geschwindigkeitsbegrenzungen verursachen mehr Stop- and-go-Verkehre mit besonders hoher Schadstoff- belastung.", 
+          "orientation": 1, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Ja. Wir unterst\u00fctzen die Forderung nach einer stadtvertr\u00e4glichen Regelgeschwindigkeit Tempo 30, damit die Sicherheit im Verkehr steigt und L\u00e4rm sowie Abgase sich verringern.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, diese Forderung unterst\u00fctzen wir. Tempo 50 auf Hauptstra\u00dfen dort, wo es dem Verkehrsfluss nachweislich zutr\u00e4glich ist und L\u00e4rmbel\u00e4stigung eine untergeordnete Rolle spielt, soll als Ausnahme m\u00f6glich bleiben. Auf Autobahnen innerst\u00e4dtisch soll Tempo 80 gelten.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Tempo 30 ist ein wesentliches Instrument zur Erh\u00f6hung der Sicherheit von Kindern, Fu\u00dfg\u00e4ngern und Fahrradfahrern. Die Verkehrsberuhigung l\u00e4sst den Kiez auf den Stra\u00dfen \u00f6ffentlichen Raum f\u00fcr die Steigerung der Lebensqualit\u00e4t der Berlinerinnen und Berliner gewinnen.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Nein. Im Rahmen des Gesamtkonzepts zur Verkehrsvermeidung setzen wir auf den R\u00fcckbau von Durchgangsstra\u00dfen, Parkraumbewirtschaftung und die Ausweitung von Tempo 30-Zonen dort, wo die Belastung durch die Umlenkung des Durchgangsverkehrs auf die Stadtautobahn abnimmt.", 
+          "orientation": 5, 
+          "vote": 0
+        }
+      ], 
+      "text": "Unterst\u00fctzen Sie die Forderung nach einer grunds\u00e4tzlichen H\u00f6chstgeschwindigkeit von 30 km/h im Stadtgebiet?"
+    }, 
+    {
+      "cat_id": 4, 
+      "positions": [
+        {
+          "argumentation": "Schon heute ist die verkehrsberuhigte Zone ein geeignetes Mittel, um Fu\u00dfg\u00e4ngern Priorit\u00e4t zu geben. Da, wo es sinnvoll ist, stehen wir der Pr\u00fcfung einer Einrichtung von autofreien Zonen offen gegen\u00fcber.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja. Wir w\u00fcnschen uns in Berlin mehr \u00f6ffentliche R\u00e4ume ohne L\u00e4rm und Abgase. Das k\u00f6nnen autofreie neue Wohngebiete sein, aber auch tempor\u00e4r oder dauerhaft umgenutzte Stra\u00dfen. Kiezfeste und tempor\u00e4re Spielstra\u00dfen sollen rechtlich erleichtert werden.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Zur \u00c4nderung des Modal Split hin zu mehr Fu\u00dfverkehr und im Sinne einer generationengerechten und lebenswerten Stadt unterst\u00fctzen wir Initiativen zur Einrichtung von autofreien Abschnitten dort, wo sie von der Bewohner*innen-schaft mitgetragen werden.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. In einem Positionspapier haben wir uns f\u00fcr mehr Begegnungszonen ausgesprochen.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. \u00d6PNV, Rad- und Fu\u00dfverkehr, Taxen und Car- Sharing auf Basis regenerativer Energien bilden als Umweltbund den Kern des Mobilit\u00e4tsnetzes. Auch der Autoverkehr ist weiterhin Teil des Mobilit\u00e4tsangebots in der Stadt. Die Herausforderung besteht darin, die Mobilit\u00e4tsarten intelligent miteinander zu kombinieren.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Sollen in Berlin mehr autofreie Zonen eingerichtet werden?"
+    }, 
+    {
+      "cat_id": 4, 
+      "positions": [
+        {
+          "argumentation": "Die A100 wollen wir weiterbauen, damit der Innovationsstandort Adlershof und der Flughafen BER besser angebunden und Wohngebiete von starkem Durchgangsverkehr entlastet werden. Daf\u00fcr m\u00fcssen keine Wohngebiete weichen, die Strecke verl\u00e4uft \u00fcberwiegend durch Gewerbegebiete.", 
+          "orientation": 1, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Ja, denn die Verl\u00e4ngerung der A100 durch Friedrichshain bis zur Storkower Stra\u00dfe bedeutet L\u00e4rm, Abgase und eine verminderte Lebensqualit\u00e4t. Wir setzen uns daher daf\u00fcr ein, dass die A100 mit dem jetzigen Bauabschnitt am Treptower Park endet.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Wir wollen einen qualifizierten Abschluss am Treptower Park. Einen Weiterbau des 17. Bauabschnitt lehnen wir ab.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Besser aber noch w\u00e4re ein R\u00fcckbau, und eine Entsiegelung des jetzt schon fertig gestellten Abschnitts.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Nein. Die im Bundesverkehrswegeplan verankerte Verl\u00e4ngerung der Stadtautobahn A 100 ist f\u00fcr uns Teil eines Gesamtkonzepts zur Verkehrsentlastung der umlie- genden und innerst\u00e4dtischen Quartiere, wo wir durch die Reduzierung von Verkehr, L\u00e4rm und Feinstaubbe- lastung mehr Lebensqualit\u00e4t schaffen wollen.", 
+          "orientation": 5, 
+          "vote": 0
+        }
+      ], 
+      "text": "Soll die A100 mit dem jetzigen Bauabschnitt 16 am Treptower Park enden?"
+    }, 
+    {
+      "cat_id": 4, 
+      "positions": [
+        {
+          "argumentation": "Die Landespolitik Berlins ist darauf ausgerichtet, dem \u00d6PNV die notwendigen Investitionen f\u00fcr den Erhalt und den Ausbau des \u00d6PNV zu erm\u00f6glichen. Wir wollen weiter einen leistungsgerechten, attraktiven \u00f6ffentlichen Nahverkehr, der \u00fcber den Landeshaushalt und die Fahrgeldeinnahmen jeweils kofinanziert wird.", 
+          "orientation": 1, 
+          "vote": 0
+        }, 
+        {
+          "argumentation": "Wir wollen die Fahrpreise senken und das \u00d6PNV- Angebot verbessern. Besonders wichtig ist f\u00fcr uns kurzfristig vor allem die Preissenkung des Sozialtickets. Dar\u00fcber hinaus wollen wir unser Modell f\u00fcr ein solidarisch finanziertes B\u00fcrgerticket voranbringen.", 
+          "orientation": 2, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Wir sind f\u00fcr einen solidarisch finanzierten Nahverkehr und haben daf\u00fcr auch bereits einen Vorschlag in die \u00f6ffentliche Debatte gebracht. Kostenfrei wird er aber nicht sein. Vielmehr sollen die Kosten auch durch die Nutznie\u00dfer eines gut ausgebauten \u00d6PNV mitgetragen werden.", 
+          "orientation": 3, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja. Wir sind die einzige Partei in Berlin, die den fahrscheinlosen \u00d6PNV ins Programm aufgenommen hat. Unsere Fraktion hat dazu bereits eine Machbarkeitsstudie vorgelegt und entsprechende Antr\u00e4ge ins Abgeordnetenhaus eingebracht.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Nein. Wir wollen den \u00d6PNV ausbauen, insbesondere das Stra\u00dfenbahnnetz. Zudem wollen wir die Kosten des Sozialtickets an den im ALG-II-Regelsatz vorgesehenen Anteil f\u00fcr Mobilit\u00e4t angleichen. Einer Einf\u00fchrung eines kostenlosen \u00d6PNV stehen wir kritisch gegen\u00fcber.", 
+          "orientation": 5, 
+          "vote": 0
+        }
+      ], 
+      "text": "Sind Sie f\u00fcr einen kostenfreien \u00d6PNV in der Berliner Innenstadt (Tarifbereich AB)"
+    }, 
+    {
+      "cat_id": 4, 
+      "positions": [
+        {
+          "argumentation": "Wir wollen den Radverkehr f\u00f6rdern und verbesserte Bedingungen schaffen. Dabei ist uns wichtig, dass es einen fairen Mix und damit ein faires Miteinander aller Verkehrsteilnehmer gibt. Wir wollen nicht, dass verschiedene Mobilit\u00e4tsarten gegeneinander aus- gespielt werden.", 
+          "orientation": 1, 
+          "vote": 1
+        }, 
+        {
+          "argumentation": "Ja, wir unterst\u00fctzen den Volksentscheid aktiv; so haben wir an unserem Stand auf dem Umweltfestival und in den Bezirken Unterschriften gesammelt.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Die LINKE. Berlin hat sich zum Volksentscheid Fahrrad von Anfang an bekannt und unterst\u00fctzt diesen aktiv. Die Infrastruktur hechelt dem positiven Trend zum Rad hinterher. Eine gute ausbebaute Radinfrastruktur ist im Interesse aller Verkehrsteilnehmenden.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, und wir helfen dabei, die notwendigen Unterschriften f\u00fcr die n\u00e4chste Stufe zu sammeln.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Auch wir wollen den Fahrradverkehr in der Stadt st\u00e4rken. Dazu wollen wir einen Landesbetrieb Fahrrad gr\u00fcnden, der im Rahmen einer gesamtst\u00e4dtischen Zielplanung den schnellen Ausbau der Radinfrastruktur vorantreibt und dabei vor allem Unfallschwer- punkte abbaut.", 
+          "orientation": 5, 
+          "vote": 1
+        }
+      ], 
+      "text": "Unterst\u00fctzen Sie den Gesetzentwurf, den der \u201eVolksentscheid Fahrrad\u201c vorgelegt hat?"
+    }, 
+    {
+      "cat_id": 4, 
+      "positions": [
+        {
+          "argumentation": "Die F\u00f6rderung des Radverkehrs ist ein erkl\u00e4rtes Ziel der CDU Berlin. Wir wollen das Radwegenetz ausbauen und Fahrradschnellwege errichten. Au\u00dferdem wollen wir mehr \u00f6ffentliche Fahrradabstellpl\u00e4tze und Fahrradparkh\u00e4user. Das hilft allen Verkehrsteilnehmern.", 
+          "orientation": 1, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Wir wollen die Mittel f\u00fcr den Radverkehr mindestens verdreifachen. Besonders wichtig ist uns der Ausbau eines Fahrradstra\u00dfen und -schnellwegenetzes, j\u00e4hrlich 100 km neue Radverkehrsanlagen, Verbesserung der Sicherheit an Kreuzungen und der Ausbau der Abstellanlagen.", 
+          "orientation": 2, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja, die Investitionen sollen deutlich erh\u00f6ht werden. In Kombination mit einer aufgabengerechten Personalausstattung im Land und den Bezirken f\u00fcr die erforderlichen Planungs- und Genehmigungsverfahren.", 
+          "orientation": 3, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Ja. Der Radverkehr bietet insgesamt die schnellste, ges\u00fcndeste und \u00f6kologischste Fortbewegungsm\u00f6glichkeit in der Berliner Innenstadt.", 
+          "orientation": 4, 
+          "vote": 2
+        }, 
+        {
+          "argumentation": "Wir stehen f\u00fcr eine moderne Fahrradpolitik. Mehr als 1000 neue Radwege und Fahrradspuren wurden in Berlin angelegt und 27.000 Fahrradabstellanlagen geschaffen. Au\u00dferdem wollen wir die Infrastruktur f\u00fcr Leihfahrr\u00e4der ausbauen und die M\u00f6glichkeit von Radschnellwegen in einer Studie pr\u00fcfen.", 
+          "orientation": 5, 
+          "vote": 2
+        }
+      ], 
+      "text": "Sollen die Investitionen in die Fahrradinfrastruktur in Berlin deutlich erh\u00f6ht werden?"
+    }
+  ]
+}
