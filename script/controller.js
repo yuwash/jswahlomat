@@ -127,6 +127,40 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
     www.bpb.de/system/files/dokument_pdf/Rechenmodell%20des%20Wahl-O-Mat.pdf
     **/
 
+
+    $scope.getMatchesArray = function() {
+        /*
+         * get sorted array for result page
+         */
+
+        //def Array
+        var matchArray = [];
+
+        //loob all parties and get Match
+        var parties = $scope.data.parties;
+        for (var pIndex in parties) {
+            var partie = parties[pIndex];
+            partie.match = $scope.getUserMatchPartieBase100(partie);
+            //Save Match in Array as key value object
+            matchArray.push(partie);
+        }
+        //Sort Array bey value
+        matchArray.sort(function(a, b) {
+            // sort array by heighest match
+            if (a.match > b.match) {
+                return -1;
+            }
+            if (a.match < b.match) {
+                return 1;
+            }
+            // a must be equal to b
+            return 0;
+        });
+
+        //return Array
+        return matchArray;
+    };
+
     // get vaule how user match partie on base of 100
     $scope.getUserMatchPartieBase100 = function(partie) {
         if ($scope.totalPartieMatches === undefined) {
@@ -257,8 +291,8 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         return Math.round(totalPosition);
     };
 
-    $scope.loadOrientationStyleH1 = function(partie) {
-        var width = $scope.getUserMatchPartieBase100(partie);
+    $scope.loadOrientationStyleH1 = function(width) {
+        //var width = $scope.getUserMatchPartieBase100(partie);
         //var width = $scope.getTotalPosition(partie);
         if (width < 0) {
             return {
@@ -281,8 +315,8 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         return "positive";
     };
 
-    $scope.getBarWidth = function(partie) {
-        var width = $scope.getUserMatchPartieBase100(partie);
+    $scope.getBarWidth = function(width) {
+        //var width = $scope.getUserMatchPartieBase100(partie);
         //var width = $scope.getTotalPosition(partie);
         if (width < 0) {
             return {

@@ -13,11 +13,11 @@
 </article>
 <article id="result">
 	<ul>
-		<li ng-repeat="p in data.parties" class="results party">
-			<button ng-click="setPartyVisible(p)"><div class="bar" ng-style="getBarWidth(p);"></div>
-				<h1 ng-style="loadOrientationStyleH1(p)">
+		<li ng-repeat="p in getMatchesArray()" class="results party">
+			<button ng-click="setPartyVisible(p)"><div class="bar" ng-style="getBarWidth(p.match);"></div>
+				<h1 ng-style="loadOrientationStyleH1(p.match)">
           {{p.name}}
-          {{getUserMatchPartieBase100(p)}}%
+          {{p.match}}%
         </h1>
 			</button>
 			<ul id="{{'party'+p.id}}" class="" ng-show="visibleParty==p.id">
