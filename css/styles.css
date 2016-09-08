@@ -230,7 +230,7 @@ header img {
   position: relative;
   margin: 0;
   /* left: 50%; */
-  /* margin-left: -93px; */
+  margin-left: 5px;
 }
 main {
   /* margin: auto; */
