@@ -414,16 +414,13 @@ main .userInput a:active {
   margin-right: 6px;
 }
 
-#favorites .negative li {
-  background-color: #f63;
-}
-#favorites .negativ li{
+#favorites li.negative {
   background-color: #f93;
 }
-#favorites .positive li{
+#favorites li.positive {
   background-color: #66cc00;
 }
-#favorites .neutral li{
+#favorites li.neutral {
   background-color: hsl(210, 78%, 78%);
 }
 

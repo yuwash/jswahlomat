@@ -127,7 +127,7 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         } else if (rating === 0) {
             return "negative";
         } else if (rating === 1) {
-            return "neutral"
+            return "neutral";
         } else if (rating === false) {
             return "skip";
         }
@@ -177,11 +177,12 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
     $scope.getUserMatchPartieBase100 = function(partie) {
         calcTotalUserMatchPartie();
 
+        var userMatchValueBase100;
         if ($scope.totalPartieMatches.sum === 0) {
-            var userMatchValueBase100 = 0
+            userMatchValueBase100 = 0;
         } else {
-            var userMatchValueBase100 = ($scope.totalPartieMatches.map.get(partie.id) / $scope.totalPartieMatches.sum) * 100;
-        };
+            userMatchValueBase100 = ($scope.totalPartieMatches[partie.id] / $scope.totalPartieMatches.sum) * 100;
+        }
         return Math.round(userMatchValueBase100);
     };
 
@@ -191,16 +192,18 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         var questions = $scope.data.questions;
 
         $scope.totalPartieMatches = {};
-        $scope.totalPartieMatches.map = new Map();
+        $scope.totalPartieMatches.map = [];
         $scope.totalPartieMatches.sum = 0;
 
+        var partie;
         for (var partieIndex in $scope.data.parties) {
             totalMatch = 0;
             for (var qIndex in questions) {
                 var question = questions[qIndex];
                 totalMatch += parseInt(question.matches[$scope.data.parties[partieIndex].id]);
             }
-            $scope.totalPartieMatches.map.set($scope.data.parties[partieIndex].id, totalMatch);
+            partie = $scope.data.parties[partieIndex];
+            $scope.totalPartieMatches[partie.id] = totalMatch;
         }
         getSumOfMaxQuestionValues(questions);
     }
