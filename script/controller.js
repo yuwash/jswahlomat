@@ -26,7 +26,7 @@ function myFunction($scope, Data) {
 
             var partyCount = [];
             partyCount.length = $scope.data.parties.length;
-            partyCount.fill(0);
+            //partyCount.fill(0);
 
             //add accent null to alle questions
             for (var q in $scope.data.questions) {
