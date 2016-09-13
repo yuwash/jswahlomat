@@ -22,18 +22,18 @@
 			<ul id="{{'party'+p.id}}" class="" ng-show="visibleParty==p.id">
 				<li ng-repeat="q in data.questions" class="questionBox" ng-init="visibleQuestion=true">
 					<header ng-click="visibleQuestion=!visibleQuestion">
-						<h4>Frage {{$index+1}} {{ getCategorie(data.questions[$index].cat_id) }}</h4>
+						<h4>Frage {{$index}} {{ getCategorie(data.questions[$index].cat_id) }}</h4>
 						<i class="fa" ng-if="visibleQuestion"></i>
 						<i class="fa open" ng-if="!visibleQuestion"></i>
 					</header>
 					<p class="question" ng-hide="visibleQuestion">
 						{{q.text}}
 					</p>
-					<header ng-hide="visibleQuestion" class="{{getRating(q.positions[p.id].orientation)}}">
-						<h4 class="{{getRating(q.positions[p.id].orientation)}}">Antwort</h4>
+					<header ng-hide="visibleQuestion" class="">
+						<h4 class="">Antwort</h4>
 					</header>
 					<p class="answer" ng-hide="visibleQuestion">
-						{{q.positions[p.id].argumentation}}
+            {{getPostitionText(p.id, q)}}
 					</p>
 				</li>
 			</ul>

@@ -133,6 +133,16 @@ app.controller('MainCtrl', function($scope, $http, Data, $rootScope, $routeParam
         }
         return "skip";
     };
+    $scope.getPostitionText = function(partyID, question){
+        var positiontext, postition;
+        for (var positionID in question.positions){
+            postition = question.positions[positionID];
+            if (postition.orientation == partyID){
+                positiontext = postition.argumentation;
+                return positiontext;
+            }
+        }
+    };
 
     /**
     voting system like bpb
