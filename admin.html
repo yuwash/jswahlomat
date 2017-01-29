@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Greenpeace Berlin Wahlkompass</title>
+
+
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+</head>
+<body ng-controller="MainCtrl">
+	<header>
+		<a href="#/start" class="logo" ng-click="newStart()">
+      <img src="images/Logo.svg" onerror="this.src='images/Logo.png' alt='Greenpeace Berlin Wahlkompass'">
+      <span>Greenpeace Berlin Wahlkompass</span>
+    </a>
+	</header>
+  <div class="flex-container">
+    <main ng-view></main>
+  </div>
+  <footer>
+    <a href="#/impressum" class="impressum">IMPRESSUM</a>
+  </footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.min.js"></script>
+  
+	<script src="script/module.js"></script>
+  <script src="script/controller.js"></script>
+</body>
+</html>
