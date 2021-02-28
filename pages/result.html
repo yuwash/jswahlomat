@@ -1,0 +1,43 @@
+<h1>Ergebnis</h1>
+<article>
+	<p>
+		{{data.content_['resultArticle']}}
+	</p>
+</article>
+<article>
+	<h3>Hinweis</h4>
+	<p>
+		{{data.content_['noteResultArticle']}}
+	</p>
+</article>
+<article id="result">
+	<ul>
+		<li ng-repeat="p in getMatchesArray()" class="results party">
+			<button ng-click="setPartyVisible(p)"><div class="bar" ng-style="getBarWidth(p.match);"></div>
+				<h1 ng-style="loadOrientationStyleH1(p.match)">
+          {{p.name}}
+          {{p.match}}%
+        </h1>
+			</button>
+			<ul id="{{'party'+p.id}}" class="" ng-show="visibleParty==p.id">
+				<li ng-repeat="q in data.questions" class="questionBox" ng-init="visibleQuestion=true">
+					<header ng-click="visibleQuestion=!visibleQuestion">
+						<h4>Frage {{$index + 1}} {{ getCategorie(data.questions[$index].cat_id) }}</h4>
+						<i class="fa" ng-if="visibleQuestion"></i>
+						<i class="fa open" ng-if="!visibleQuestion"></i>
+					</header>
+					<p class="question" ng-hide="visibleQuestion">
+						{{q.text}}
+					</p>
+					<header ng-hide="visibleQuestion" class="">
+						<h4 class="">Antwort</h4>
+					</header>
+					<p class="answer" ng-hide="visibleQuestion">
+            {{getPostitionText(p.id, q)}}
+					</p>
+				</li>
+			</ul>
+		</li>
+	</ul>
+	{{party}}
+</article>
